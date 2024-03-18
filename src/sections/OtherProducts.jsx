@@ -8,98 +8,98 @@ const OtherProducts = () => {
       <nav className="flex flex-col">
         <NavLink
           key={"tiltAndTurn"}
-          to={"/tiltAndTurn"}
+          to={"/products/TiltAndTurn"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Tilt & Turn
         </NavLink>
         <NavLink
           key={"awning"}
-          to={"/awning"}
+          to={"/products/Awning"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Awning
         </NavLink>
         <NavLink
           key={"slidingWindows"}
-          to={"/slidingWindows"}
+          to={"/products/SlidingWindows"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Sliding Windows
         </NavLink>
         <NavLink
           key={"bifold"}
-          to={"/bifold"}
+          to={"/products/Bifold"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Bifold
         </NavLink>
         <NavLink
           key={"french"}
-          to={"/french"}
+          to={"/products/French"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           French
         </NavLink>
         <NavLink
           key={"casement"}
-          to={"/casement"}
+          to={"/products/Casement"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Casement
         </NavLink>
         <NavLink
           key={"tiltAndSlide"}
-          to={"/tiltAndSlide"}
+          to={"/products/TiltAndSlide"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Tilt & Slide
         </NavLink>
         <NavLink
-          key={"Our Products"}
-          to={"/products"}
+          key={"frenchDoor"}
+          to={"/products/FrenchDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           French Door
         </NavLink>
         <NavLink
           key={"slidingDoor"}
-          to={"/slidingDoor"}
+          to={"/products/SlidingDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Sliding Door
         </NavLink>
         <NavLink
           key={"stackerDoor"}
-          to={"/stackerDoor"}
+          to={"/products/StackerDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Stacker Door
         </NavLink>
         <NavLink
           key={"liftAnSlideDoor"}
-          to={"/liftAnSlideDoor"}
+          to={"/products/LiftAndSlideDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Lift & Slide Door
         </NavLink>
         <NavLink
           key={"tiltAndSlideDoor"}
-          to={"/tiltAndSlideDoor"}
+          to={"/products/TiltAndSlideDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Tilt & Slide Door
         </NavLink>
         <NavLink
           key={"bifoldDoor"}
-          to={"/bifoldDoor"}
+          to={"/products/BifoldDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Bifold Door
         </NavLink>
         <NavLink
           key={"laundryComboDoor"}
-          to={"/laundryComboDoor"}
+          to={"/products/LaundryComboDoor"}
           className="otherProducts font-lato text-base font-semibold mb-8"
         >
           Laundry Combo Door

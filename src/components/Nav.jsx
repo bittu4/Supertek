@@ -3,9 +3,11 @@ import { Link, NavLink } from "react-router-dom";
 import { logo, phoneIcon } from "../assets/icons";
 import { menuIcon, closeIcon } from "../assets/icons";
 import { useState } from "react";
+import { navProductLinks } from "../constants";
 
 const Nav = () => {
   const [isOpen, setIsopen] = useState(false);
+  const [productList, setProductList] = useState(false);
 
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
@@ -38,13 +40,33 @@ const Nav = () => {
           >
             About Us
           </a>
-          <NavLink
+          <a
             key={"Our Products"}
-            to={"/products"}
+            onClick={() => setProductList(!productList)}
             className="text-black font-poppins text-base productDropdown relative hover:font-medium"
           >
             Our Products
-          </NavLink>
+            {productList ? (
+              <div className="productDropdownList absolute z-10 bg-dark-orange top-8 -left-6">
+                <ul>
+                  {navProductLinks.map((link) => (
+                    <li
+                      key={link.name}
+                      className="hover:bg-[#EFEFEF] hover:rounded-[5px]"
+                    >
+                      <NavLink
+                        key={link.name}
+                        className="text-white font-poppins text-base block px-6 py-2 hover:font-medium hover:text-black"
+                        to={link.to}
+                      >
+                        {link.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </a>
           <a
             key={"Contact Us"}
             href={"#contact"}
@@ -98,14 +120,36 @@ const Nav = () => {
                 >
                   About Us
                 </a>
-                <NavLink
+                <a
                   key={"Our Products"}
-                  to={"/products"}
                   className="text-black font-poppins text-base productDropdown relative"
-                  onClick={ToggleSidebar}
+                  onClick={() => {
+                    setProductList(!productList);
+                    ToggleSidebar;
+                  }}
                 >
                   Our Products
-                </NavLink>
+                  {productList ? (
+                    <div className="productDropdownList absolute z-10 bg-dark-orange top-8 -left-6">
+                      <ul>
+                        {navProductLinks.map((link) => (
+                          <li
+                            key={link.name}
+                            className="hover:bg-[#EFEFEF] hover:rounded-[5px]"
+                          >
+                            <NavLink
+                              key={link.name}
+                              className="text-white font-poppins text-base block px-6 py-2 hover:font-medium hover:text-black"
+                              to={link.to}
+                            >
+                              {link.name}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </a>
                 <a
                   key={"Contact Us"}
                   href={"#contact"}

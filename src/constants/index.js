@@ -20,6 +20,23 @@ import {
   tickOrangeIcon,
 } from "../assets/icons";
 
+export const navProductLinks = [
+  { to: "/products/TiltAndTurn", name: "TiltAndTurn" },
+  { to: "/products/Awning", name: "Awning" },
+  { to: "/products/SlidingWindows", name: "SlidingWindows" },
+  { to: "/products/Bifold", name: "Bifold" },
+  { to: "/products/French", name: "French" },
+  { to: "/products/Casement", name: "Casement" },
+  { to: "/products/TiltAndSlide", name: "TiltAndSlide" },
+  { to: "/products/FrenchDoor", name: "FrenchDoor" },
+  { to: "/products/SlidingDoor", name: "SlidingDoor" },
+  { to: "/products/StackerDoor", name: "StackerDoor" },
+  { to: "/products/LiftAndSlideDoor", name: "LiftAndSlideDoor" },
+  { to: "/products/TiltAndSlideDoor", name: "TiltAndSlideDoor" },
+  { to: "/products/BifoldDoor", name: "BifoldDoor" },
+  { to: "/products/LaundryComboDoor", name: "LaundryComboDoor" },
+];
+
 export const Feature = [
   {
     image: tickOrangeIcon,

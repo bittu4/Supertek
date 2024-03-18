@@ -54,13 +54,13 @@ body {
   visibility: visible;
 }
 
-.productDropdownList {
-  display: none;
+.productDropdown .productDropdownList {
+  font-weight: 400;
+  border-radius: 10px;
 }
 
-.productDropdown:hover .productDropdownList {
-  display: block;
-  font-weight: 400;
+.productDropdown .productDropdownList .active {
+  color: #000;
 }
 
 .contactInputField:focus-visible {

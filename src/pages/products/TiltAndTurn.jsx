@@ -1,18 +1,17 @@
-import Benefits from "../sections/Benefits";
-import Faq from "../sections/Faq";
-import Features from "../sections/Features";
-import OtherProducts from "../sections/OtherProducts";
-import ProductBanner from "../sections/ProductBanner";
-import RequestQuote from "../sections/RequestQuote";
-import Services from "../sections/Services";
+import Benefits from "../../sections/Benefits";
+import Faq from "../../sections/Faq";
+import Features from "../../sections/Features";
+import OtherProducts from "../../sections/OtherProducts";
+import ProductBanner from "../../sections/ProductBanner";
+import RequestQuote from "../../sections/RequestQuote";
+import Services from "../../sections/Services";
 
 const tiltAndTurn = {
   name: "TILT & TURN",
   description:
     "uPVC Tilt and Turn Windows are a type of window design that offers versatility and functionality. These windows have a unique mechanism that allows them to tilt inwards from the top for ventilation purposes, as well as open fully inwards like a door for easy cleaning and access. uPVC Tilt and Turn Windows are known for their energy efficiency, as they provide excellent insulation and can help reduce heating and cooling costs. They are also available in various styles and finishes to suit different architectural designs and personal preferences.",
 };
-
-const Products = () => {
+const TiltAndTurn = () => {
   return (
     <main className="flex flex-col">
       <section>
@@ -46,4 +45,4 @@ const Products = () => {
   );
 };
 
-export default Products;
+export default TiltAndTurn;
