@@ -1,8 +1,6 @@
-// import { tickOrangeIcon } from "../assets/icons";
-import { FrenchDoorImg } from "../assets/images";
 import { Benefit } from "../constants";
 
-const Benefits = () => {
+const Benefits = (props) => {
   return (
     <section className="w-full max-container flex max-md:flex-col items-center gap-x-5">
       <div className="w-1/2 max-md:w-full max-md:mb-10">
@@ -22,7 +20,7 @@ const Benefits = () => {
         </button>
       </div>
       <div className="w-1/2 max-md:w-full">
-        <img className="w-full" src={FrenchDoorImg} />
+        <img className="w-full" src={props.productDetails.image2} />
       </div>
     </section>
   );

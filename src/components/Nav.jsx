@@ -1,17 +1,32 @@
 "use client";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { logo, phoneIcon } from "../assets/icons";
 import { menuIcon, closeIcon } from "../assets/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { navProductLinks } from "../constants";
 
 const Nav = () => {
+  const location = useLocation();
+
   const [isOpen, setIsopen] = useState(false);
   const [productList, setProductList] = useState(false);
+  const [productStyle, setProductStyle] = useState(false);
 
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
   };
+
+  const toggleProductList = () => {
+    setProductList(!productList);
+  };
+
+  useEffect(() => {
+    if (location.pathname.includes("/products/")) {
+      setProductStyle(true);
+    } else {
+      setProductStyle(false);
+    }
+  }, [setProductStyle, location.pathname]);
 
   return (
     <header className={"w-full padding-x bg-white"}>
@@ -42,8 +57,12 @@ const Nav = () => {
           </a>
           <a
             key={"Our Products"}
-            onClick={() => setProductList(!productList)}
-            className="text-black font-poppins text-base productDropdown relative hover:font-medium"
+            onClick={toggleProductList}
+            className={
+              productStyle
+                ? "text-black font-poppins text-base productDropdown relative hover:font-medium active"
+                : "text-black font-poppins text-base productDropdown relative hover:font-medium"
+            }
           >
             Our Products
             {productList ? (
@@ -122,11 +141,12 @@ const Nav = () => {
                 </a>
                 <a
                   key={"Our Products"}
-                  className="text-black font-poppins text-base productDropdown relative"
-                  onClick={() => {
-                    setProductList(!productList);
-                    ToggleSidebar;
-                  }}
+                  onClick={toggleProductList}
+                  className={
+                    productStyle
+                      ? "text-black font-poppins text-base productDropdown relative hover:font-medium active"
+                      : "text-black font-poppins text-base productDropdown relative hover:font-medium"
+                  }
                 >
                   Our Products
                   {productList ? (
@@ -141,6 +161,7 @@ const Nav = () => {
                               key={link.name}
                               className="text-white font-poppins text-base block px-6 py-2 hover:font-medium hover:text-black"
                               to={link.to}
+                              onClick={ToggleSidebar}
                             >
                               {link.name}
                             </NavLink>

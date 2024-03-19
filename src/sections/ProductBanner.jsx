@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 const ProductBanner = (props) => {
   const name = props.productDetails.name;
   const descriptionPara = props.productDetails.description.split("\\\\");
