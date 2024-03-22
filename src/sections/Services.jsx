@@ -1,19 +1,38 @@
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../constants";
+import { motion } from "framer-motion";
+
+const serviceCard = {
+  initial: {
+    opacity: 0,
+    scale: 0.4,
+  },
+  animate: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 1,
+    },
+  },
+};
 
 const Services = () => {
   return (
-    <section className="max-container w-full">
-      <h3 className="font-extrabold sm:text-4xl text-3xl max-sm:leading-10 text-light-black">
-        Why Supertek?
+    <section className="max-container w-full flex items-center flex-col lg:-my-8">
+      <h3 className="font-extrabold sm:text-4xl text-3xl max-sm:leading-10 text-black text-center">
+        Benefits
       </h3>
-      <div
-        className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 xl:gap-6 lg:gap-5 gap-4 mt-12"
+      <motion.div
+        variants={serviceCard}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 xl:gap-6 lg:gap-5 gap-4 mt-12"
       >
         {services.map((service, index) => (
-          <ServiceCard key={service.label} {...service} />
+          <ServiceCard key={index} {...service} />
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };

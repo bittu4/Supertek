@@ -1,11 +1,13 @@
 import { french1, french2 } from "../../assets/images";
-import Benefits from "../../sections/Benefits";
-import Faq from "../../sections/Faq";
-import Features from "../../sections/Features";
-import OtherProducts from "../../sections/OtherProducts";
-import ProductBanner from "../../sections/ProductBanner";
-import RequestQuote from "../../sections/RequestQuote";
-import Services from "../../sections/Services";
+import {
+  BenefitsProduct,
+  Faq,
+  FeaturesProduct,
+  OtherProducts,
+  ProductBanner,
+  RequestQuote,
+  ServicesProduct,
+} from "../../sections/";
 
 const french = {
   name: "FRENCH",
@@ -25,13 +27,13 @@ const French = () => {
         <div className="flex gap-x-6">
           <div className="max-lg:w-full lg:w-4/5">
             <div className="md:mt-14">
-              <Features productDetails={french} />
+              <FeaturesProduct productDetails={french} />
             </div>
             <div className="padding-t md:mt-14">
-              <Benefits productDetails={french} />
+              <BenefitsProduct productDetails={french} />
             </div>
             <div className="padding-y mt-4">
-              <Services />
+              <ServicesProduct />
             </div>
             <div className="">
               <RequestQuote />

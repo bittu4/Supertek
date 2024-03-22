@@ -4,6 +4,7 @@ import { logo, phoneIcon } from "../assets/icons";
 import { menuIcon, closeIcon } from "../assets/icons";
 import { useEffect, useState } from "react";
 import { navProductLinks } from "../constants";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const location = useLocation();
@@ -20,6 +21,21 @@ const Nav = () => {
     setProductList(!productList);
   };
 
+  const navAnimation = {
+    initial: {
+      y: -105,
+      opacity: 0,
+    },
+    animate: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 1.2,
+        staggerChildren: 0.4,
+      },
+    },
+  };
+
   useEffect(() => {
     if (location.pathname.includes("/products/")) {
       setProductStyle(true);
@@ -30,9 +46,15 @@ const Nav = () => {
 
   return (
     <header className={"w-full padding-x bg-white"}>
-      <nav className="max-container py-5 flex items-center justify-between">
+      <motion.nav
+        variants={navAnimation}
+        initial="initial"
+        animate="animate"
+        className="max-container py-5 flex items-center justify-between"
+      >
         <Link to={"/"}>
-          <img
+          <motion.img
+            variants={navAnimation}
             src={logo}
             width={160}
             height={42}
@@ -40,7 +62,10 @@ const Nav = () => {
             className="object-contain"
           />
         </Link>
-        <div className="flex-1 lg:flex hidden items-center justify-center gap-16 max-xl:gap-6 max-">
+        <motion.div
+          variants={navAnimation}
+          className="flex-1 lg:flex hidden items-center justify-center gap-16 max-xl:gap-6 max-"
+        >
           <NavLink
             key={"Home"}
             to={"/"}
@@ -93,8 +118,11 @@ const Nav = () => {
           >
             Contact Us
           </a>
-        </div>
-        <div className="lg:flex hidden items-center gap-4 bg-dark-orange rounded-[10px] px-6 py-[14px] ">
+        </motion.div>
+        <motion.div
+          variants={navAnimation}
+          className="lg:flex hidden items-center gap-4 bg-dark-orange rounded-[10px] px-6 py-[14px] "
+        >
           <img
             src={phoneIcon}
             width={24}
@@ -110,9 +138,10 @@ const Nav = () => {
               +61452422758
             </p>
           </div>
-        </div>
+        </motion.div>
         <div className="lg:hidden flex">
-          <img
+          <motion.img
+            variants={navAnimation}
             src={menuIcon}
             width={24}
             height={24}
@@ -212,7 +241,7 @@ const Nav = () => {
             ></div>
           </>
         </div>
-      </nav>
+      </motion.nav>
     </header>
   );
 };

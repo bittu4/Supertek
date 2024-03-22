@@ -1,6 +1,6 @@
-import { Feature } from "../constants";
+import { FeatureProduct } from "../constants";
 
-const Features = (props) => {
+const FeaturesProduct = (props) => {
   return (
     <section className="w-full max-container flex items-center gap-x-8 max-md:flex-col-reverse">
       <div className="w-1/2 max-md:w-full">
@@ -11,7 +11,7 @@ const Features = (props) => {
           Features
         </h2>
         <div>
-          {Feature.map((features, index) => (
+          {FeatureProduct.map((features, index) => (
             <div key={index} className="flex items-center mb-5 gap-x-4">
               <img src={features.image} />
               <p>{features.label}</p>
@@ -26,4 +26,4 @@ const Features = (props) => {
   );
 };
 
-export default Features;
+export default FeaturesProduct;

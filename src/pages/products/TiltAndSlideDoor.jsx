@@ -1,11 +1,13 @@
 import { tiltAndSlideDoor1, tiltAndSlideDoor2 } from "../../assets/images";
-import Benefits from "../../sections/Benefits";
-import Faq from "../../sections/Faq";
-import Features from "../../sections/Features";
-import OtherProducts from "../../sections/OtherProducts";
-import ProductBanner from "../../sections/ProductBanner";
-import RequestQuote from "../../sections/RequestQuote";
-import Services from "../../sections/Services";
+import {
+  BenefitsProduct,
+  Faq,
+  FeaturesProduct,
+  OtherProducts,
+  ProductBanner,
+  RequestQuote,
+  ServicesProduct,
+} from "../../sections/";
 
 const tiltAndSlideDoor = {
   name: "TILT AND SLIDE DOOR",
@@ -25,13 +27,13 @@ const TiltAndSlideDoor = () => {
         <div className="flex gap-x-6">
           <div className="max-lg:w-full lg:w-4/5">
             <div className="md:mt-14">
-              <Features productDetails={tiltAndSlideDoor} />
+              <FeaturesProduct productDetails={tiltAndSlideDoor} />
             </div>
             <div className="padding-t md:mt-14">
-              <Benefits productDetails={tiltAndSlideDoor} />
+              <BenefitsProduct productDetails={tiltAndSlideDoor} />
             </div>
             <div className="padding-y mt-4">
-              <Services />
+              <ServicesProduct />
             </div>
             <div className="">
               <RequestQuote />

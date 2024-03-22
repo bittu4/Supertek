@@ -1,19 +1,35 @@
 import {
+  PartnerFour,
+  PartnerOne,
+  PartnerThird,
+  PartnerTwo,
+  awning1,
+  casement1,
+  slidingWindow1,
+  tiltAndTurn1,
+} from "../assets/images";
+import {
   facebookIcon,
   gmailIcon,
   service1,
   service2,
   service3,
   service4,
+  service5,
   service6,
   service7,
   service8,
   service9,
+  service10,
   service11,
   service12,
   service13,
   service14,
+  service15,
   twitterIcon,
+  tickIcon,
+  yesIcon,
+  noIcon,
   locationIcon,
   mailIcon,
   phoneIconFooter,
@@ -37,7 +53,218 @@ export const navProductLinks = [
   { to: "/products/LaundryComboDoor", name: "LaundryComboDoor" },
 ];
 
-export const Feature = [
+export const products = [
+  {
+    image: awning1,
+    name: "Awning Window",
+  },
+  {
+    image: casement1,
+    name: "Casement Window",
+  },
+  {
+    image: slidingWindow1,
+    name: "Sliding Window",
+  },
+  {
+    image: tiltAndTurn1,
+    name: "Tilt & Turn Window",
+  },
+];
+
+export const services = [
+  {
+    image: service1,
+    label: "10 Years Warranty",
+  },
+  {
+    image: service2,
+    label: "Reduce Energy Bills",
+  },
+  {
+    image: service3,
+    label: "Thermal insulation",
+  },
+  {
+    image: service4,
+    label: "All-weather insulated frames",
+  },
+  {
+    image: service5,
+    label: "Maintenence-free",
+  },
+  {
+    image: service6,
+    label: "Durability",
+  },
+  {
+    image: service7,
+    label: "Structural stability",
+  },
+  {
+    image: service8,
+    label: "Safety security mechanism",
+  },
+  {
+    image: service9,
+    label: "Drainage system",
+  },
+  {
+    image: service10,
+    label: "Eco-friendly",
+  },
+  {
+    image: service11,
+    label: "Sound Proof Window",
+  },
+  {
+    image: service12,
+    label: "Double Glazed Glass",
+  },
+  {
+    image: service13,
+    label: "Bushfire Resistant",
+  },
+  {
+    image: service14,
+    label: "UV Resistant",
+  },
+  {
+    image: service15,
+    label: "Laminated Glass",
+  },
+];
+
+export const windowProductList = [
+  { window: "Tilt & Turn" },
+  { window: "Awning" },
+  { window: "Sliding" },
+  { window: "Bifold" },
+  { window: "French" },
+  { window: "Casement" },
+  { window: "Winder" },
+  { window: "Tilt & Slide" },
+];
+
+export const doorProductList = [
+  { door: "French" },
+  { door: "Sliding" },
+  { door: "Stacking" },
+  { door: "Lift & Slide" },
+  { door: "Tilt & Slide" },
+  { door: "Bifold" },
+  { door: "Single Hinged" },
+  { door: "Laundry Combo Door" },
+];
+
+export const reviewsListOne = [
+  {
+    review: `"Supertek's UPVC double glazed windows and door are good quality products made in Australia.  Gav was helpful and easy to work with from the design stage to installation. He does the installation himself (not outsourced). He promised to have the windows installed within two months from the initial consultation and purchase.  The work was completed in that time frame as promised."`,
+    name: "Susan Kublick",
+  },
+  {
+    review: `"Gav and his team are amazing. Our windows were paper thin before. After Gav installed our double glazed windows, it really keeps our house so much warmer than before. Gav is great, he made sure everything is done perfectly. Thank you Gav and the staff!"`,
+    name: "Nicole Beik",
+  },
+  {
+    review: `"Gav has been a pleasure to deal with from the first appointment, he was friendly and helpful, gave great advice and was great to communicate with. We did a complete replacement of the windows and external doors in our house and couldn't be happier with the results. The UPVC windows and sliding doors have changed the look and feel of our home and are of extremely high quality."`,
+    name: "Lindsay Newton",
+  },
+  {
+    review: `"Great experience with Supertek. Gav is very knowledgeable and thorough. He explained all the options clearly and didn't try to push a hard sell. The installation was smooth and the finished product looks great. Loving the quiet in our house and the increased warmth!"`,
+    name: "Linda Taimre",
+  },
+  {
+    review: `"Gav takes pride in his work, not some normal guy thats just want your money and takes off,, he makes sure the job is done properly,, him and his staff where so friendly and there is no mess everthing is done to the best ,,if your looking for double glazed window ,,i would recommend them for sure, i am so happy with their work cheers guys."`,
+    name: "Anthony Bates",
+  },
+  {
+    review: `"I would surely recommend this double glazed uPVC window and door company to anyone who is in the market for retrofit or new windows and doors. They seem to offer a great selection of quality products at competitive prices, backed up by solid customer service."`,
+    name: "Manisha Tomar",
+  },
+];
+
+export const partners = [
+  { partner: PartnerOne, label: "Partner One" },
+  { partner: PartnerTwo, label: "Partner Two" },
+  { partner: PartnerThird, label: "Partner Third" },
+  { partner: PartnerFour, label: "Partner Four" },
+];
+
+export const whyChoose = [
+  {
+    feature: "Thermal Efficient",
+    upvc: yesIcon,
+    timber: yesIcon,
+    aluminium: noIcon,
+  },
+  {
+    feature: "Sound Proof",
+    upvc: yesIcon,
+    timber: noIcon,
+    aluminium: yesIcon,
+  },
+  {
+    feature: "Low Maintenance",
+    upvc: yesIcon,
+    timber: noIcon,
+    aluminium: noIcon,
+  },
+  {
+    feature: "Structurally Reinforced",
+    upvc: yesIcon,
+    timber: noIcon,
+    aluminium: noIcon,
+  },
+  {
+    feature: "UV Resistant",
+    upvc: yesIcon,
+    timber: noIcon,
+    aluminium: noIcon,
+  },
+  {
+    feature: "Bushfire Resistant",
+    upvc: yesIcon,
+    timber: noIcon,
+    aluminium: yesIcon,
+  },
+  {
+    feature: "Prevents Condensation",
+    upvc: yesIcon,
+    timber: yesIcon,
+    aluminium: noIcon,
+  },
+  {
+    feature: "Secure",
+    upvc: yesIcon,
+    timber: yesIcon,
+    aluminium: noIcon,
+  },
+  {
+    feature: "Weather Proof",
+    upvc: yesIcon,
+    timber: noIcon,
+    aluminium: yesIcon,
+  },
+];
+
+export const features = [
+  { image: tickIcon, content: "Clear view double glazed panes" },
+  { image: tickIcon, content: "Excellent fire and weather resistance" },
+  { image: tickIcon, content: "Available in a range of sizes" },
+  { image: tickIcon, content: "Customisable to your style and space" },
+  { image: tickIcon, content: "A guaranteed service life of 30+ years" },
+];
+
+export const benefits = [
+  { image: tickIcon, content: "Clear view double glazed panes" },
+  { image: tickIcon, content: "Excellent fire and weather resistance" },
+  { image: tickIcon, content: "Available in a range of sizes" },
+  { image: tickIcon, content: "Customisable to your style and space" },
+  { image: tickIcon, content: "A guaranteed service life of 30+ years" },
+];
+
+export const FeatureProduct = [
   {
     image: tickOrangeIcon,
     label: "Clear view double glazed panes",
@@ -60,7 +287,7 @@ export const Feature = [
   },
 ];
 
-export const Benefit = [
+export const BenefitProduct = [
   {
     image: tickOrangeIcon,
     label: "Instantly open up for fresh air and al fresco dining",
@@ -89,7 +316,7 @@ export const Benefit = [
   },
 ];
 
-export const services = [
+export const servicesProduct = [
   {
     image: service1,
     label: "10 Years Warranty",

@@ -1,3 +1,15 @@
+import bannerWindow from "./banner-window.png";
+import benefitImg from "./benefit-img.png";
+import supertek from "./supertek.png";
+import workBg from "./work-bg.png";
+import productPageBannerImg from "./product-page-banner-img-1.png";
+import bannerBg from "./banner-bg.png";
+import featureBenefit1 from "./features-benefit-img-1.png";
+import featureBenefit2 from "./features-benefit-img-2.png";
+import PartnerOne from "./Partner-img-1.png";
+import PartnerTwo from "./Partner-img-2.png";
+import PartnerThird from "./Partner-img-3.png";
+import PartnerFour from "./Partner-img-4.png";
 import FooterLogo from "./Footer-logo.png";
 import attachmentImg from "./attachment-img.png";
 import tiltAndTurn1 from "./tilt&turn1.webp";
@@ -30,6 +42,18 @@ import laundryComboDoor1 from "./laundryDoor1.jpg";
 import laundryComboDoor2 from "./laundryDoor2.jpg";
 
 export {
+  bannerWindow,
+  benefitImg,
+  supertek,
+  workBg,
+  productPageBannerImg,
+  featureBenefit1,
+  featureBenefit2,
+  bannerBg,
+  PartnerOne,
+  PartnerTwo,
+  PartnerThird,
+  PartnerFour,
   FooterLogo,
   attachmentImg,
   tiltAndTurn1,

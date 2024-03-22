@@ -1,6 +1,6 @@
-import { Benefit } from "../constants";
+import { BenefitProduct } from "../constants";
 
-const Benefits = (props) => {
+const BenefitsProduct = (props) => {
   return (
     <section className="w-full max-container flex max-md:flex-col items-center gap-x-5">
       <div className="w-1/2 max-md:w-full max-md:mb-10">
@@ -8,7 +8,7 @@ const Benefits = (props) => {
           BENEFITS
         </h2>
         <div>
-          {Benefit.map((benefits, index) => (
+          {BenefitProduct.map((benefits, index) => (
             <div key={index} className="flex items-center mb-5 gap-x-4">
               <img src={benefits.image} />
               <p>{benefits.label}</p>
@@ -26,4 +26,4 @@ const Benefits = (props) => {
   );
 };
 
-export default Benefits;
+export default BenefitsProduct;

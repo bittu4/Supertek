@@ -11,7 +11,7 @@ const Footer = () => {
           <img src={FooterLogo} alt="Footer Logo" width={160} height={42} />
           <p className="text-base leading-[31px] font-medium text-white mt-7 pr-8">
             The uPVC double-glazed windows and doors from Supterk Windows shield
-            you and your family from Melbourne's sweltering summers and chilly
+            you and your family from Melbourne&apos;s sweltering summers and chilly
             winters. This is better to invest in thermally efficient systems, as
             energy costs skyrocket.
           </p>
