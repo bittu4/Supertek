@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { doorProductList, windowProductList } from "../constants";
 
 const OurProducts = () => {
@@ -13,7 +14,7 @@ const OurProducts = () => {
           </h4>
           {windowProductList.map((windows, index) => (
             <li className="text-xl leading-7" key={index} {...windows}>
-              {windows.window}
+              <NavLink to={windows.to}>{windows.window}</NavLink>
             </li>
           ))}
         </div>
@@ -23,7 +24,7 @@ const OurProducts = () => {
           </h4>
           {doorProductList.map((doors, index) => (
             <li className="text-xl leading-7" key={index} {...doors}>
-              {doors.door}
+              <NavLink to={doors.to}>{doors.door}</NavLink>
             </li>
           ))}
         </div>

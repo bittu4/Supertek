@@ -81,12 +81,14 @@ const Hero = () => {
                 and doors use advanced technology. This guarantees a cosy,
                 climate-controlled indoor environment all year long.
               </motion.p>
-              <motion.button
+              <motion.a
+                key={"Contact Us"}
+                href={"#contact"}
                 variants={textVariants}
                 className="lg:py-6 lg:px-14 py-4 px-8 lg:mt-10 mt-5 rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-[20px] lg:font-semibold font-medium"
               >
                 Get a Quote
-              </motion.button>
+              </motion.a>
             </motion.div>
             <div className="sm:flex hidden px-6 py-14 items-center flex-1 justify-center">
               <motion.img

@@ -19,17 +19,21 @@ const productImageVariants = {
 const ProductCard = ({ image, name }) => {
   return (
     <div className="lg:p-7 p-4 bg-white shadow-card rounded-md hover:shadow-cardHover hover:scale-110 max-sm:hover:scale-105 duration-500 ease-out max-sm:mb-4 max-sm:mx-1">
-      <motion.img
-        variants={productImageVariants}
-        initial="initial"
-        whileInView="animate"
-        src={image}
-        width={370}
-        height={357}
-        className="object-contain"
-        alt="Products"
-      />
-      <p className="mt-12 text-[#464747] text-xl font-extrabold">{name}</p>
+      <div className="flex flex-col items-center justify-center">
+        <motion.img
+          variants={productImageVariants}
+          initial="initial"
+          whileInView="animate"
+          src={image}
+          className="object-contain"
+          width={370}
+          height={357}
+          alt="Products"
+        />
+      </div>
+      <p className="mt-12 text-[#464747] text-xl font-extrabold">
+        {name}
+      </p>
     </div>
   );
 };

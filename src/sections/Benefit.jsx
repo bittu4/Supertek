@@ -2,7 +2,7 @@ import { whyChoose } from "../constants";
 
 const Benefit = () => {
   return (
-    <div className="padding lg:-mt-16 lg:-mb-8">
+    <div className="max-container padding lg:-mt-16 lg:-mb-8">
       <h3 className="sm:text-4xl font-extrabold text-black leading-[71px] w-full text-center text-3xl max-sm:leading-10">
         Why Choose Supertek Windows?
       </h3>

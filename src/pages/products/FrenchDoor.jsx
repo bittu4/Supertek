@@ -8,6 +8,7 @@ import {
   RequestQuote,
   ServicesProduct,
 } from "../../sections/";
+import ProductVideo from "../../sections/ProductVideo";
 
 const frenchDoor = {
   name: "FRENCH DOOR",
@@ -26,6 +27,9 @@ const FrenchDoor = () => {
         <div className="flex gap-x-6">
           <div className="max-lg:w-full lg:w-4/5">
             <div className="md:mt-14">
+              <ProductVideo />
+            </div>
+            <div className="md:mt-14">
               <FeaturesProduct productDetails={frenchDoor} />
             </div>
             <div className="padding-t md:mt-14">
@@ -34,9 +38,9 @@ const FrenchDoor = () => {
             <div className="padding-y mt-4">
               <ServicesProduct />
             </div>
-            <div className="">
+            <section id="requestQuote" className="">
               <RequestQuote />
-            </div>
+            </section>
             <div className="padding-y mb-12">
               <Faq />
             </div>

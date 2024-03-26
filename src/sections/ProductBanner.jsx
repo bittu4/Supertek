@@ -9,7 +9,7 @@ const ProductBanner = (props) => {
             <h2 className="font-lato font-extrabold text-4xl max-md:text-3xl text-[#fff]">
               {name}
             </h2>
-            <p className="font-lato font-normal text-base text-[#fff] mt-9">
+            <p className="font-lato font-normal text-base text-[#fff] leading-7 mt-9">
               {descriptionPara.map((description, index) => (
                 <span key={index}>
                   {description}
@@ -18,6 +18,13 @@ const ProductBanner = (props) => {
                 </span>
               ))}
             </p>
+            <a
+              key={"Request Quote"}
+              href={"#requestQuote"}
+              className="lg:py-6 lg:px-14 py-4 px-8 lg:mt-8 mt-4 block w-fit rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-[20px] lg:font-semibold font-medium"
+            >
+              Claim free Quote
+            </a>
           </div>
         </div>
       </div>
