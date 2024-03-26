@@ -85,8 +85,8 @@ const Nav = () => {
             onClick={toggleProductList}
             className={
               productStyle
-                ? "text-black font-poppins text-base productDropdown relative hover:font-medium active"
-                : "text-black font-poppins text-base productDropdown relative hover:font-medium"
+                ? "text-black font-poppins text-base productDropdown relative hover:font-medium cursor-pointer active"
+                : "text-black font-poppins text-base productDropdown relative hover:font-medium cursor-pointer"
             }
           >
             Our Products{" "}
