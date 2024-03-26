@@ -15,7 +15,7 @@ const tiltAndSlideDoor = {
   image1: tiltAndSlideDoor1,
   image2: tiltAndSlideDoor2,
   description:
-    "uPVC Tilt and Slide doors are a type of sliding door system that combines the functionality of a sliding door with the added feature of a tilt function.\\\\ The tilt and slide mechanism allows the door panel to be tilted inwards from the top for ventilation purposes, similar to a tilt and turn window. Additionally, the door panel can slide horizontally along a track, providing a wide opening for easy access and allowing for maximum natural light and views.\\\\ The tilt function of uPVC Tilt and Slide doors is particularly useful for controlled ventilation, as it allows fresh air to enter while maintaining security and privacy. The sliding function offers convenience and flexibility, making these doors suitable for various applications, such as connecting indoor and outdoor spaces or separating different areas within a building.\\\\ uPVC Tilt and Slide doors are available in different sizes, styles, and finishes to suit various architectural designs and personal preferences. They are known for their energy efficiency, as they provide excellent insulation and can help reduce heating and cooling costs. Overall, uPVC Tilt and Slide doors offer a versatile and practical solution for both residential and commercial buildings.",
+    "uPVC Tilt and Slide doors are a type of sliding door system that combines the functionality of a sliding door with the added feature of a tilt function.",
 };
 
 const TiltAndSlideDoor = () => {

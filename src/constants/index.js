@@ -48,20 +48,20 @@ import {
 } from "../assets/icons";
 
 export const navProductLinks = [
-  { to: "/products/TiltAndTurn", name: "TiltAndTurn" },
+  { to: "/products/TiltAndTurn", name: "Tilt And Turn" },
   { to: "/products/Awning", name: "Awning" },
-  { to: "/products/SlidingWindows", name: "SlidingWindows" },
+  { to: "/products/SlidingWindows", name: "Sliding Windows" },
   { to: "/products/Bifold", name: "Bifold" },
   { to: "/products/French", name: "French" },
   { to: "/products/Casement", name: "Casement" },
-  { to: "/products/TiltAndSlide", name: "TiltAndSlide" },
-  { to: "/products/FrenchDoor", name: "FrenchDoor" },
-  { to: "/products/SlidingDoor", name: "SlidingDoor" },
-  { to: "/products/StackerDoor", name: "StackerDoor" },
-  { to: "/products/LiftAndSlideDoor", name: "LiftAndSlideDoor" },
-  { to: "/products/TiltAndSlideDoor", name: "TiltAndSlideDoor" },
-  { to: "/products/BifoldDoor", name: "BifoldDoor" },
-  { to: "/products/LaundryComboDoor", name: "LaundryComboDoor" },
+  { to: "/products/TiltAndSlide", name: "Tilt And Slide" },
+  { to: "/products/FrenchDoor", name: "French Door" },
+  { to: "/products/SlidingDoor", name: "Sliding Door" },
+  { to: "/products/StackerDoor", name: "Stacker Door" },
+  { to: "/products/LiftAndSlideDoor", name: "Lift And Slide Door" },
+  { to: "/products/TiltAndSlideDoor", name: "Tilt And Slide Door" },
+  { to: "/products/BifoldDoor", name: "Bifold Door" },
+  { to: "/products/LaundryComboDoor", name: "Laundry Combo Door" },
 ];
 
 export const oldProducts = [

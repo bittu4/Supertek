@@ -1,6 +1,6 @@
 "use client";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { logo, phoneIcon } from "../assets/icons";
+import { downArrowIcon, logo, phoneIcon } from "../assets/icons";
 import { menuIcon, closeIcon } from "../assets/icons";
 import { useEffect, useState } from "react";
 import { navProductLinks } from "../constants";
@@ -89,9 +89,15 @@ const Nav = () => {
                 : "text-black font-poppins text-base productDropdown relative hover:font-medium"
             }
           >
-            Our Products
+            Our Products{" "}
+            <img
+              className="inline ml-1"
+              width={15}
+              height={15}
+              src={downArrowIcon}
+            />
             {productList ? (
-              <div className="productDropdownList absolute z-10 bg-dark-orange top-8 -left-6">
+              <div className="w-max productDropdownList absolute z-10 bg-dark-orange top-8 -left-6">
                 <ul>
                   {navProductLinks.map((link) => (
                     <li

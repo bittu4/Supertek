@@ -15,7 +15,7 @@ const tiltAndSlide = {
   image1: tiltAndSlide1,
   image2: tiltAndSlide2,
   description:
-    "uPVC Tilt & Slide windows are a type of window design that combines the functionality of both tilt and slide mechanisms.\\\\ The tilt function allows the window sash to tilt inwards from the top, providing ventilation while maintaining security. This is particularly useful when you want to let fresh air in without fully opening the window or when you need to clean the exterior glass from inside your home.\\\\ The slide function allows the window sash to slide horizontally along a track, providing a larger opening for easy access and maximum airflow. This is especially convenient for larger windows or when you want to create a seamless transition between indoor and outdoor spaces.\\\\ uPVC Tilt & Slide windows are known for their energy efficiency, as they provide excellent insulation and help to reduce heating and cooling costs. They are also available in various styles, finishes, and sizes to suit different architectural designs and personal preferences.\\\\ These windows are a popular choice for both residential and commercial buildings due to their versatility, ease of use, and low maintenance requirements.",
+    "uPVC Tilt & Slide windows are a type of window design that combines the functionality of both tilt and slide mechanisms.",
 };
 
 const TiltAndSlide = () => {

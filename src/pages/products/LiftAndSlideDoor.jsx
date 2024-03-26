@@ -15,7 +15,7 @@ const liftAndSlideDoor = {
   image1: liftAndSlideDoor1,
   image2: liftAndSlideDoor2,
   description:
-    "PVC Double Glazed Lift and Slide doors are a type of door system that offers enhanced insulation, security, and ease of use.\\\\ The 'lift and slide' mechanism allows for smooth and effortless operation of the door. When the handle is lifted, the door panel is slightly raised off the track, enabling it to slide open or closed with minimal effort. This mechanism also provides a secure seal when the door is closed, enhancing both insulation and security.\\\\ uPVC Double Glazed Lift and Slide doors are available in various sizes, styles, and finishes to suit different architectural designs and personal preferences. They are a popular choice for homeowners seeking a combination of functionality, energy efficiency, and aesthetic appeal in their doors.",
+    "PVC Double Glazed Lift and Slide doors are a type of door system that offers enhanced insulation, security, and ease of use.",
 };
 
 const LiftAndSlideDoor = () => {
