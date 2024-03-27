@@ -15,7 +15,7 @@ const liftAndSlideDoor = {
   image1: liftAndSlideDoor1,
   image2: liftAndSlideDoor2,
   description:
-    "PVC Double Glazed Lift and Slide doors are a type of door system that offers enhanced insulation, security, and ease of use.",
+    "PVC Double Glazed Lift and Slide doors are a type of door system that offers enhanced insulation, security, and ease of use. The tilt function allows the window sash to tilt inwards from the top, providing ventilation while maintaining security. This is particularly useful when you want to let fresh air in without fully opening the window or when you need to clean the exterior glass from inside your home.",
 };
 
 const LiftAndSlideDoor = () => {

@@ -15,6 +15,7 @@ const Nav = () => {
 
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
+    productList === true ? setProductList(false) : setProductList(false);
   };
 
   const toggleProductList = () => {
@@ -183,9 +184,15 @@ const Nav = () => {
                       : "text-black font-poppins text-base productDropdown relative hover:font-medium"
                   }
                 >
-                  Our Products
+                  Our Products{" "}
+                  <img
+                    className="inline"
+                    width={15}
+                    height={15}
+                    src={downArrowIcon}
+                  />
                   {productList ? (
-                    <div className="productDropdownList absolute z-10 bg-dark-orange top-8 -left-6">
+                    <div className="w-max productDropdownList absolute z-10 bg-dark-orange -top-14 left-28">
                       <ul>
                         {navProductLinks.map((link) => (
                           <li
@@ -194,7 +201,7 @@ const Nav = () => {
                           >
                             <NavLink
                               key={link.name}
-                              className="text-white font-poppins text-base block px-6 py-2 hover:font-medium hover:text-black"
+                              className="text-white font-poppins text-base block pl-2.5 pr-1 py-2 hover:font-medium hover:text-black"
                               to={link.to}
                               onClick={ToggleSidebar}
                             >

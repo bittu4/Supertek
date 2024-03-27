@@ -1,11 +1,11 @@
 import ProductCard from "../components/ProductCard";
-import { oldProducts } from "../constants";
-// import { Swiper, SwiperSlide } from "swiper/react";
+import { products } from "../constants";
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-// import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Product = () => {
   return (
@@ -13,12 +13,12 @@ const Product = () => {
       <h3 className="font-extrabold sm:text-4xl text-3xl max-sm:leading-10 text-black text-center">
         Our Premium Products
       </h3>
-      <div className="grid lg:grid-cols-4 max-sm:grid-cols-1 md:grid-cols-2 xl:gap-14 lg:gap-8 gap-4 mt-12">
+      {/* <div className="grid lg:grid-cols-4 max-sm:grid-cols-1 md:grid-cols-2 xl:gap-14 lg:gap-8 gap-4 mt-12">
         {oldProducts.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
-      </div>
-      {/* <Swiper
+      </div> */}
+      <Swiper
         slidesPerView={1}
         spaceBetween={10}
         autoplay={{
@@ -40,7 +40,7 @@ const Product = () => {
         }}
         loop={true}
         modules={[Autoplay, Pagination]}
-        className=""
+        className="md:pb-8 lg:pb-5"
       >
         {products.map((product, index) => (
           <SwiperSlide
@@ -50,7 +50,7 @@ const Product = () => {
             <ProductCard {...product} />
           </SwiperSlide>
         ))}
-      </Swiper> */}
+      </Swiper>
     </section>
   );
 };
