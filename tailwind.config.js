@@ -32,8 +32,8 @@ export default {
         faq: "0px 4px 28px 0px rgba(33, 109, 180, 0.10)",
       },
       backgroundImage: {
-        work: "url('./assets/images/work-bg.png')",
-        banner: "url('./assets/images/banner-bg.png')",
+        work: "url('./assets/images/work-bg.webp')",
+        banner: "url('./assets/images/banner-bg.webp')",
       },
       screens: {
         wide: "1440px",
