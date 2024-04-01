@@ -15,9 +15,13 @@ const BenefitsProduct = (props) => {
             </div>
           ))}
         </div>
-        <button className="font-poppins font-semibold text-[#fff] text-lg bg-[#ff8000] rounded-[10px] py-6 px-12 mt-3">
+        <a
+          key={"Request Quote"}
+          href={"#requestQuote"}
+          className="block w-fit font-poppins font-semibold text-[#fff] text-lg bg-[#ff8000] rounded-[10px] py-6 px-12 mt-3"
+        >
           Request Quote
-        </button>
+        </a>
       </div>
       <div className="w-1/2 max-md:w-full">
         <img className="w-full" src={props.productDetails.image2} />
