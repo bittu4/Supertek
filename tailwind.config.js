@@ -34,6 +34,7 @@ export default {
       backgroundImage: {
         work: "url('./assets/images/work-bg.webp')",
         banner: "url('./assets/images/banner-bg.webp')",
+        productBanner: "url('./assets/images/French-door-banner.webp')",
       },
       screens: {
         wide: "1440px",
