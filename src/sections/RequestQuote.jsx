@@ -50,7 +50,7 @@ const RequestQuote = () => {
   };
 
   const handleRemoveFile = () => {
-    setFileName(null);
+    setFileName("");
     setFileExist(false);
   };
 
@@ -99,6 +99,7 @@ const RequestQuote = () => {
           setInstagram(false);
           setHearAboutUs("");
           setFileName("");
+          setFileExist(false);
           console.log("Success!", response);
         })
         .catch((error) => console.log("Error!", error.message));
@@ -120,6 +121,7 @@ const RequestQuote = () => {
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               type="text"
               placeholder="|"
+              name="fullName"
               value={fullName}
               onChange={(e) => setFullName(e.target.value)}
             />
@@ -135,6 +137,7 @@ const RequestQuote = () => {
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               type="email"
               placeholder="Doe"
+              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -150,6 +153,7 @@ const RequestQuote = () => {
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               type="text"
               placeholder="+1 012 3456 789"
+              name="phone"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
             />
@@ -167,6 +171,7 @@ const RequestQuote = () => {
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               type="text"
               placeholder="243434"
+              name="postCode"
               value={postCode}
               onChange={(e) => setPostCode(e.target.value)}
             />
@@ -181,6 +186,7 @@ const RequestQuote = () => {
             <select
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               onChange={(e) => setProduct(e.target.value)}
+              name="product"
               value={product}
             >
               <option>-- Select --</option>
@@ -210,6 +216,7 @@ const RequestQuote = () => {
             <select
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               onChange={(e) => setProjectType(e.target.value)}
+              name="projectType"
               value={projectType}
             >
               <option>-- Select --</option>
@@ -229,6 +236,7 @@ const RequestQuote = () => {
             <select
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               onChange={(e) => setInstallRequired(e.target.value)}
+              name="installRequired"
               value={installRequired}
             >
               <option value="yes">Yes</option>
@@ -296,6 +304,7 @@ const RequestQuote = () => {
                 type="file"
                 id="fileInput"
                 className="hidden"
+                name="file"
                 onChange={(e) => handleFile(e)}
               />
               <div
