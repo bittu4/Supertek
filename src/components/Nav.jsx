@@ -18,10 +18,6 @@ const Nav = () => {
     productList === true ? setProductList(false) : setProductList(false);
   };
 
-  const toggleProductList = () => {
-    setProductList(!productList);
-  };
-
   const navAnimation = {
     initial: {
       y: -105,
@@ -83,7 +79,8 @@ const Nav = () => {
           </a>
           <a
             key={"Our Products"}
-            onClick={toggleProductList}
+            onMouseOver={() => setProductList(true)}
+            onMouseOut={() => setProductList(false)}
             className={
               productStyle
                 ? "text-black font-poppins text-base productDropdown relative hover:font-medium cursor-pointer active"
@@ -98,7 +95,11 @@ const Nav = () => {
               src={downArrowIcon}
             />
             {productList ? (
-              <div className="w-max productDropdownList absolute z-10 bg-dark-orange top-8 -left-6">
+              <div
+                onMouseOver={() => setProductList(true)}
+                onMouseOut={() => setProductList(false)}
+                className="w-max productDropdownList absolute z-10 bg-dark-orange top-5 -left-6"
+              >
                 <ul>
                   {navProductLinks.map((link) => (
                     <li
@@ -177,7 +178,8 @@ const Nav = () => {
                 </a>
                 <a
                   key={"Our Products"}
-                  onClick={toggleProductList}
+                  onMouseOver={() => setProductList(true)}
+                  onMouseOut={() => setProductList(false)}
                   className={
                     productStyle
                       ? "text-black font-poppins text-base productDropdown relative hover:font-medium active"
@@ -192,7 +194,11 @@ const Nav = () => {
                     src={downArrowIcon}
                   />
                   {productList ? (
-                    <div className="w-max productDropdownList absolute z-10 bg-dark-orange -top-14 left-28">
+                    <div
+                      onMouseOver={() => setProductList(true)}
+                      onMouseOut={() => setProductList(false)}
+                      className="w-max productDropdownList absolute z-10 bg-dark-orange -top-14 left-28"
+                    >
                       <ul>
                         {navProductLinks.map((link) => (
                           <li

@@ -1,5 +1,5 @@
 import Nav from "./components/Nav";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import {
   Awning,
   Bifold,
@@ -19,8 +19,15 @@ import {
   TiltAndTurn,
 } from "./pages";
 import Footer from "./components/Footer";
+import { useEffect } from "react";
 
 function App() {
+  const pathname = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <div className="relative">

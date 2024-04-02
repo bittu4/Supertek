@@ -488,7 +488,7 @@ export const allFaq = [
 
 export const footerLinks = [
   { to: "#", name: "Home" },
-  { to: "#benefits", name: "Services" },
+  // { to: "#benefits", name: "Services" },
   { to: "#about", name: "About" },
   { to: "#products", name: "Products" },
   { to: "#contact", name: "Contacts" },
