@@ -2,24 +2,27 @@ import { useState } from "react";
 import { attachmentImg } from "../assets/images";
 
 const RequestQuote = () => {
-  const [fullName, setFullName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [postCode, setPostCode] = useState("");
-  const [product, setProduct] = useState("");
-  const [projectType, setProjectType] = useState("");
-  const [installRequired, setInstallRequired] = useState("yes");
   const [google, setGoogle] = useState(false);
   const [referral, setReferral] = useState(false);
   const [instagram, setInstagram] = useState(false);
-  const [hearAboutUs, setHearAboutUs] = useState("");
-  const [fileName, setFileName] = useState("");
-  const [fileExist, setFileExist] = useState(false);
+  const [fileName, setFileName] = useState(null);
+  // const [fileExist, setFileExist] = useState(false);
   const [error, setError] = useState("");
+
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    phone: "",
+    postCode: "",
+    product: "",
+    projectType: "",
+    installRequired: "",
+    radio: "",
+  });
 
   const handleGoogle = (e) => {
     if (e.target.value === "google") {
-      setHearAboutUs(e.target.value);
+      setFormData({ ...formData, [e.target.name]: e.target.value });
       setGoogle(true);
       setReferral(false);
       setInstagram(false);
@@ -28,7 +31,7 @@ const RequestQuote = () => {
 
   const handleReferral = (e) => {
     if (e.target.value === "referral") {
-      setHearAboutUs(e.target.value);
+      setFormData({ ...formData, [e.target.name]: e.target.value });
       setGoogle(false);
       setReferral(true);
       setInstagram(false);
@@ -37,7 +40,7 @@ const RequestQuote = () => {
 
   const handleInstagram = (e) => {
     if (e.target.value === "instagram") {
-      setHearAboutUs(e.target.value);
+      setFormData({ ...formData, [e.target.name]: e.target.value });
       setGoogle(false);
       setReferral(false);
       setInstagram(true);
@@ -45,73 +48,90 @@ const RequestQuote = () => {
   };
 
   const handleFile = (e) => {
-    setFileName(e.target.files[0].name);
-    setFileExist(true);
+    setFileName(e.target.files[0]);
+    // setFileExist(true);
   };
 
-  const handleRemoveFile = () => {
-    setFileName("");
-    setFileExist(false);
+  // const handleRemoveFile = () => {
+  //   setFileName(null);
+  //   setFileExist(false);
+  // };
+
+  const changeHandler = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbydHZaNhhUVqpktkVO1iSbdRx9nzn3FtvIZ5N4eWfz7V9MAhptglx8O520y4-LzzRB-/exec";
-  const form = document.forms["request-quote"];
+    "https://script.google.com/macros/s/AKfycbywUH7f5A4afkani7xwqcAa7OE3rXT1gbqSzKVvBgoupQW-ApwcW5CjbiWh3nAhhZD9/exec";
 
   const handleSubmission = async (e) => {
     e.preventDefault();
     if (
-      fullName === "" ||
-      email === "" ||
-      phone === "" ||
-      postCode === "" ||
-      product === "" ||
-      projectType === "" ||
-      installRequired === "" ||
-      hearAboutUs === "" ||
-      fileName === ""
+      formData.fullName === "" ||
+      formData.email === "" ||
+      formData.phone === "" ||
+      formData.postCode === "" ||
+      formData.radio === ""
     ) {
       setError("Please fill this detail!");
     } else {
-      console.log({
-        fullName,
-        email,
-        phone,
-        postCode,
-        product,
-        projectType,
-        installRequired,
-        hearAboutUs,
-        fileName,
+      let fileData = null;
+
+      if (fileName) {
+        fileData = await toBase64(fileName);
+      }
+
+      const payload = {
+        formData,
+        fileName: fileName?.name,
+        mimeType: fileName?.type,
+        fileData,
+      };
+
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        contentType: "application/json",
+        body: JSON.stringify(payload),
       });
-      fetch(scriptURL, { method: "POST", body: new FormData(form) })
-        .then((response) => {
-          alert("Form Submitted Successfully");
-          setFullName("");
-          setEmail("");
-          setPhone("");
-          setPostCode("");
-          setProduct("");
-          setProjectType("");
-          setInstallRequired("");
-          setGoogle(false);
-          setReferral(false);
-          setInstagram(false);
-          setHearAboutUs("");
-          setFileName("");
-          setFileExist(false);
-          console.log("Success!", response);
-        })
-        .catch((error) => console.log("Error!", error.message));
+
+      const result = await response.json();
+      console.log(result);
+
+      setFormData({
+        fullName: "",
+        email: "",
+        phone: "",
+        postCode: "",
+        product: "",
+        projectType: "",
+        installRequired: "",
+        radio: "",
+      });
+      setGoogle(false);
+      setReferral(false);
+      setInstagram(false);
+      setFileName(null);
+      // setFileExist(false);
+      setError("");
+      alert("Form Submitted Successfully");
     }
   };
+
+  // eslint-disable-next-line no-unused-vars
+  const toBase64 = (fileName) =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(fileName);
+      reader.onload = () => resolve(reader.result.split(",")[1]);
+      reader.onerror = (error) => reject(error);
+    });
 
   return (
     <section className="w-full max-container px-5 py-9 bg-[#F5F6F8] rounded-[20px]">
       <h2 className="font-lato mb-12 font-extrabold text-4xl max-sm:text-3xl max-sm:mb-8">
         Request Quote
       </h2>
-      <form onSubmit={handleSubmission} name="request-quote">
+      <form method="post" onSubmit={handleSubmission} name="request-quote">
         <div className="grid grid-cols-3 max-md:grid-cols-1 max-md:gap-y-6 gap-x-6 mb-9">
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333]">
@@ -122,11 +142,11 @@ const RequestQuote = () => {
               type="text"
               placeholder="|"
               name="fullName"
-              value={fullName}
-              onChange={(e) => setFullName(e.target.value)}
+              value={formData.fullName}
+              onChange={changeHandler}
             />
             <span className="text-xs text-red-500 font-poppins font-medium">
-              {fullName === "" ? error : ""}
+              {formData.fullName === "" ? error : ""}
             </span>
           </div>
           <div className="flex flex-col gap-y-1">
@@ -138,27 +158,27 @@ const RequestQuote = () => {
               type="email"
               placeholder="Doe"
               name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={formData.email}
+              onChange={changeHandler}
             />
             <span className="text-xs text-red-500 font-poppins font-medium">
-              {email === "" ? error : ""}
+              {formData.email === "" ? error : ""}
             </span>
           </div>
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333]">
-              Phone number *
+              Phone Number *
             </label>
             <input
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
               type="text"
               placeholder="+1 012 3456 789"
               name="phone"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
+              value={formData.phone}
+              onChange={changeHandler}
             />
             <span className="text-xs text-red-500 font-poppins font-medium">
-              {phone === "" ? error : ""}
+              {formData.phone === "" ? error : ""}
             </span>
           </div>
         </div>
@@ -172,24 +192,24 @@ const RequestQuote = () => {
               type="text"
               placeholder="243434"
               name="postCode"
-              value={postCode}
-              onChange={(e) => setPostCode(e.target.value)}
+              value={formData.postCode}
+              onChange={changeHandler}
             />
             <span className="text-xs text-red-500 font-poppins font-medium">
-              {postCode === "" ? error : ""}
+              {formData.postCode === "" ? error : ""}
             </span>
           </div>
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333]">
-              Select Product *
+              Select Product
             </label>
             <select
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
-              onChange={(e) => setProduct(e.target.value)}
+              onChange={changeHandler}
               name="product"
-              value={product}
+              value={formData.product}
             >
-              <option>-- Select --</option>
+              <option value="">-- Select --</option>
               <option value="Tilt And Turn">Tilt And Turn</option>
               <option value="Awning">Awning</option>
               <option value="Sliding Windows">Sliding Windows</option>
@@ -205,46 +225,38 @@ const RequestQuote = () => {
               <option value="Bifold Door">Bifold Door</option>
               <option value="Laundry Combo Door">Laundry Combo Door</option>
             </select>
-            <span className="text-xs text-red-500 font-poppins font-medium">
-              {product === "" ? error : ""}
-            </span>
           </div>
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333]">
-              Project Type *
+              Project Type
             </label>
             <select
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
-              onChange={(e) => setProjectType(e.target.value)}
+              onChange={changeHandler}
               name="projectType"
-              value={projectType}
+              value={formData.projectType}
             >
-              <option>-- Select --</option>
+              <option value="">-- Select --</option>
               <option value="New Build">New Build</option>
               <option value="Renovation">Renovation</option>
             </select>
-            <span className="text-xs text-red-500 font-poppins font-medium">
-              {projectType === "" ? error : ""}
-            </span>
           </div>
         </div>
         <div className="grid grid-cols-3 max-md:grid-cols-1 max-md:gap-y-6 gap-x-6 mb-9">
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333]">
-              Installation Required *
+              Installation Required
             </label>
             <select
               className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
-              onChange={(e) => setInstallRequired(e.target.value)}
+              onChange={changeHandler}
               name="installRequired"
-              value={installRequired}
+              value={formData.installRequired}
             >
+              <option value="">-- Select --</option>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
-            <span className="text-xs text-red-500 font-poppins font-medium">
-              {installRequired === "" ? error : ""}
-            </span>
           </div>
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333]">
@@ -292,12 +304,12 @@ const RequestQuote = () => {
               </div>
             </div>
             <span className="text-xs text-red-500 font-poppins font-medium">
-              {hearAboutUs === "" ? error : ""}
+              {formData.radio === "" ? error : ""}
             </span>
           </div>
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333] mb-1">
-              Upload Project Details (Maximum file size limit is 10MB) *
+              Upload Project Details (Maximum file size limit is 10MB)
             </label>
             <div>
               <input
@@ -316,11 +328,8 @@ const RequestQuote = () => {
                   Upload
                 </span>
               </div>
-              <span className="text-xs text-red-500 font-poppins font-medium">
-                {fileName === "" ? error : ""}
-              </span>
-              <label className="font-lato font-medium text-sm text-pretty">
-                {fileName}
+              {/* <label className="font-lato font-medium text-sm text-pretty">
+                {fileName.name}
               </label>
               {fileExist && (
                 <p
@@ -329,7 +338,7 @@ const RequestQuote = () => {
                 >
                   X
                 </p>
-              )}
+              )} */}
             </div>
           </div>
         </div>
@@ -337,6 +346,7 @@ const RequestQuote = () => {
           <button
             className="lg:py-5 lg:px-10 py-4 px-6 rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-none font-medium"
             type="submit"
+            name="submit"
           >
             Request Quote
           </button>
