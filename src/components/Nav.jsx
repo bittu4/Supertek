@@ -87,7 +87,7 @@ const Nav = () => {
                 : "text-black font-poppins text-base productDropdown relative hover:font-medium cursor-pointer"
             }
           >
-            Our Products{" "}
+            uPVC Windows & Doors{" "}
             <img
               className="inline ml-1"
               width={15}
@@ -186,7 +186,7 @@ const Nav = () => {
                       : "text-black font-poppins text-base productDropdown relative hover:font-medium"
                   }
                 >
-                  Our Products{" "}
+                  uPVC Windows & Doors{" "}
                   <img
                     className="inline"
                     width={15}

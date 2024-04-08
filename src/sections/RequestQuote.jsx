@@ -6,7 +6,6 @@ const RequestQuote = () => {
   const [referral, setReferral] = useState(false);
   const [instagram, setInstagram] = useState(false);
   const [fileName, setFileName] = useState(null);
-  // const [fileExist, setFileExist] = useState(false);
   const [error, setError] = useState("");
 
   const [formData, setFormData] = useState({
@@ -49,13 +48,7 @@ const RequestQuote = () => {
 
   const handleFile = (e) => {
     setFileName(e.target.files[0]);
-    // setFileExist(true);
   };
-
-  // const handleRemoveFile = () => {
-  //   setFileName(null);
-  //   setFileExist(false);
-  // };
 
   const changeHandler = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -111,13 +104,11 @@ const RequestQuote = () => {
       setReferral(false);
       setInstagram(false);
       setFileName(null);
-      // setFileExist(false);
       setError("");
       alert("Form Submitted Successfully");
     }
   };
 
-  // eslint-disable-next-line no-unused-vars
   const toBase64 = (fileName) =>
     new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -328,17 +319,9 @@ const RequestQuote = () => {
                   Upload
                 </span>
               </div>
-              {/* <label className="font-lato font-medium text-sm text-pretty">
-                {fileName.name}
+              <label className="font-lato font-medium text-sm text-pretty">
+                {fileName?.name}
               </label>
-              {fileExist && (
-                <p
-                  className="font-lato inline-block pr-1 pl-1 pt-[1px] font-semibold rounded-full bg-dark-orange text-xs text-white w-[18px] h-[18px] ml-2 cursor-pointer text-center"
-                  onClick={handleRemoveFile}
-                >
-                  X
-                </p>
-              )} */}
             </div>
           </div>
         </div>
