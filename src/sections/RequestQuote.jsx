@@ -311,7 +311,7 @@ const RequestQuote = () => {
                 onChange={(e) => handleFile(e)}
               />
               <div
-                className="flex w-fit px-4 py-1 rounded-[6px] bg-[#FF800033]"
+                className="cursor-pointer flex w-fit px-4 py-1 rounded-[6px] bg-[#FF800033]"
                 onClick={() => document.getElementById("fileInput").click()}
               >
                 <img width="16px" height="16px" src={attachmentImg} />
