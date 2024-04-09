@@ -3,19 +3,20 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 import { downArrowIcon, logo, phoneIcon } from "../assets/icons";
 import { menuIcon, closeIcon } from "../assets/icons";
 import { useEffect, useState } from "react";
-import { navProductLinks } from "../constants";
+import { navDoorsLinks, navWindowsLinks } from "../constants";
 import { motion } from "framer-motion";
 
 const Nav = () => {
   const location = useLocation();
 
   const [isOpen, setIsopen] = useState(false);
-  const [productList, setProductList] = useState(false);
-  const [productStyle, setProductStyle] = useState(false);
+  const [windowsList, setWindowsList] = useState(false);
+  const [doorsList, setDoorsList] = useState(false);
+  const [doorsListStyle, setDoorsListStyle] = useState(false);
+  const [windowsListStyle, setWindowsListStyle] = useState(false);
 
   const ToggleSidebar = () => {
     isOpen === true ? setIsopen(false) : setIsopen(true);
-    productList === true ? setProductList(false) : setProductList(false);
   };
 
   const navAnimation = {
@@ -34,12 +35,17 @@ const Nav = () => {
   };
 
   useEffect(() => {
-    if (location.pathname.includes("/products/")) {
-      setProductStyle(true);
+    if (location.pathname.includes("/windows/")) {
+      setWindowsListStyle(true);
+      setDoorsListStyle(false);
+    } else if (location.pathname.includes("/doors/")) {
+      setDoorsListStyle(true);
+      setWindowsListStyle(false);
     } else {
-      setProductStyle(false);
+      setDoorsListStyle(false);
+      setWindowsListStyle(false);
     }
-  }, [setProductStyle, location.pathname]);
+  }, [setDoorsListStyle, setWindowsListStyle, location.pathname]);
 
   return (
     <header className={"w-full padding-x bg-white"}>
@@ -61,47 +67,89 @@ const Nav = () => {
         </Link>
         <motion.div
           variants={navAnimation}
-          className="flex-1 lg:flex hidden items-center justify-center gap-16 max-xl:gap-6 max-"
+          className="navList flex-1 lg:flex hidden items-center justify-center gap-10 max-xl:gap-4"
         >
           <NavLink
             key={"Home"}
             to={"/"}
-            className="text-black font-poppins text-base hover:font-medium"
+            className="text-black font-poppins xl:text-base lg:text-sm hover:font-medium"
           >
             Home
           </NavLink>
           <a
             key={"About Us"}
             href={"#about"}
-            className="text-black font-poppins text-base hover:font-medium"
+            className="text-black font-poppins xl:text-base lg:text-sm hover:font-medium"
           >
             About Us
           </a>
           <a
-            key={"Our Products"}
-            onMouseOver={() => setProductList(true)}
-            onMouseOut={() => setProductList(false)}
+            key={"Our Windows"}
+            onMouseOver={() => setWindowsList(true)}
+            onMouseOut={() => setWindowsList(false)}
             className={
-              productStyle
-                ? "text-black font-poppins text-base productDropdown relative hover:font-medium cursor-pointer active"
-                : "text-black font-poppins text-base productDropdown relative hover:font-medium cursor-pointer"
+              windowsListStyle
+                ? "text-black font-poppins xl:text-base lg:text-sm productDropdown relative hover:font-medium cursor-pointer active"
+                : "text-black font-poppins xl:text-base lg:text-sm productDropdown relative hover:font-medium cursor-pointer"
             }
           >
-            uPVC Windows & Doors{" "}
+            uPVC Windows{" "}
             <img
               className="inline ml-1"
               width={15}
               height={15}
               src={downArrowIcon}
             />
-            {productList ? (
+            {windowsList ? (
               <div
-                onMouseOver={() => setProductList(true)}
-                onMouseOut={() => setProductList(false)}
+                onMouseOver={() => setWindowsList(true)}
+                onMouseOut={() => setWindowsList(false)}
                 className="w-max productDropdownList absolute z-10 bg-dark-orange top-5 -left-6"
               >
                 <ul>
-                  {navProductLinks.map((link) => (
+                  {navWindowsLinks.map((link) => (
+                    <li
+                      key={link.name}
+                      className="hover:bg-[#EFEFEF] hover:rounded-[5px]"
+                    >
+                      <NavLink
+                        key={link.name}
+                        className="text-white font-poppins text-base block px-6 py-2 hover:font-medium hover:text-black"
+                        to={link.to}
+                      >
+                        {link.name}
+                      </NavLink>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </a>
+          <a
+            key={"Our Doors"}
+            onMouseOver={() => setDoorsList(true)}
+            onMouseOut={() => setDoorsList(false)}
+            className={
+              doorsListStyle
+                ? "text-black font-poppins xl:text-base lg:text-sm productDropdown relative hover:font-medium cursor-pointer active"
+                : "text-black font-poppins xl:text-base lg:text-sm productDropdown relative hover:font-medium cursor-pointer"
+            }
+          >
+            uPVC Doors{" "}
+            <img
+              className="inline ml-1"
+              width={15}
+              height={15}
+              src={downArrowIcon}
+            />
+            {doorsList ? (
+              <div
+                onMouseOver={() => setDoorsList(true)}
+                onMouseOut={() => setDoorsList(false)}
+                className="w-max productDropdownList absolute z-10 bg-dark-orange top-5 -left-6"
+              >
+                <ul>
+                  {navDoorsLinks.map((link) => (
                     <li
                       key={link.name}
                       className="hover:bg-[#EFEFEF] hover:rounded-[5px]"
@@ -122,14 +170,14 @@ const Nav = () => {
           <a
             key={"Contact Us"}
             href={"#contact"}
-            className="text-black font-poppins text-base hover:font-medium"
+            className="text-black font-poppins xl:text-base lg:text-sm hover:font-medium"
           >
             Contact Us
           </a>
         </motion.div>
         <motion.div
           variants={navAnimation}
-          className="lg:flex hidden items-center gap-4 bg-dark-orange rounded-[10px] px-6 py-[14px] "
+          className="lg:flex hidden items-center xl:gap-4 lg:gap-3 bg-dark-orange rounded-[10px] xl:px-6 lg:px-4 py-[14px] "
         >
           <img
             src={phoneIcon}
@@ -177,30 +225,73 @@ const Nav = () => {
                   About Us
                 </a>
                 <a
-                  key={"Our Products"}
-                  onMouseOver={() => setProductList(true)}
-                  onMouseOut={() => setProductList(false)}
+                  key={"Our Windows"}
+                  onMouseOver={() => setWindowsList(true)}
+                  onMouseOut={() => setWindowsList(false)}
                   className={
-                    productStyle
+                    windowsListStyle
                       ? "text-black font-poppins text-base productDropdown relative hover:font-medium active"
                       : "text-black font-poppins text-base productDropdown relative hover:font-medium"
                   }
                 >
-                  uPVC Windows & Doors{" "}
+                  uPVC Windows{" "}
                   <img
                     className="inline"
                     width={15}
                     height={15}
                     src={downArrowIcon}
                   />
-                  {productList ? (
+                  {windowsList ? (
                     <div
-                      onMouseOver={() => setProductList(true)}
-                      onMouseOut={() => setProductList(false)}
-                      className="w-max productDropdownList absolute z-10 bg-dark-orange -top-14 left-28"
+                      onMouseOver={() => setWindowsList(true)}
+                      onMouseOut={() => setWindowsList(false)}
+                      className="w-max productDropdownList absolute z-20 bg-dark-orange -top-14 left-28"
                     >
                       <ul>
-                        {navProductLinks.map((link) => (
+                        {navWindowsLinks.map((link) => (
+                          <li
+                            key={link.name}
+                            className="hover:bg-[#EFEFEF] hover:rounded-[5px]"
+                          >
+                            <NavLink
+                              key={link.name}
+                              className="text-white font-poppins text-base block pl-2.5 pr-1 py-2 hover:font-medium hover:text-black"
+                              to={link.to}
+                              onClick={ToggleSidebar}
+                            >
+                              {link.name}
+                            </NavLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ) : null}
+                </a>
+                <a
+                  key={"Our Doors"}
+                  onMouseOver={() => setDoorsList(true)}
+                  onMouseOut={() => setDoorsList(false)}
+                  className={
+                    doorsListStyle
+                      ? "text-black font-poppins text-base productDropdown relative hover:font-medium active"
+                      : "text-black font-poppins text-base productDropdown relative hover:font-medium"
+                  }
+                >
+                  uPVC Doors{" "}
+                  <img
+                    className="inline"
+                    width={15}
+                    height={15}
+                    src={downArrowIcon}
+                  />
+                  {doorsList ? (
+                    <div
+                      onMouseOver={() => setDoorsList(true)}
+                      onMouseOut={() => setDoorsList(false)}
+                      className="w-max productDropdownList absolute z-20 bg-dark-orange -top-14 left-28"
+                    >
+                      <ul>
+                        {navDoorsLinks.map((link) => (
                           <li
                             key={link.name}
                             className="hover:bg-[#EFEFEF] hover:rounded-[5px]"

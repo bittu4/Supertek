@@ -47,21 +47,41 @@ import {
   tickOrangeIcon,
 } from "../assets/icons";
 
-export const navProductLinks = [
-  { to: "/products/TiltAndTurn", name: "Tilt And Turn" },
-  { to: "/products/Awning", name: "Awning" },
-  { to: "/products/SlidingWindows", name: "Sliding Windows" },
-  { to: "/products/Bifold", name: "Bifold" },
-  { to: "/products/French", name: "French" },
-  { to: "/products/Casement", name: "Casement" },
-  { to: "/products/TiltAndSlide", name: "Tilt And Slide" },
-  { to: "/products/FrenchDoor", name: "French Door" },
-  { to: "/products/SlidingDoor", name: "Sliding Door" },
-  { to: "/products/StackerDoor", name: "Stacker Door" },
-  { to: "/products/LiftAndSlideDoor", name: "Lift And Slide Door" },
-  { to: "/products/TiltAndSlideDoor", name: "Tilt And Slide Door" },
-  { to: "/products/BifoldDoor", name: "Bifold Door" },
-  { to: "/products/LaundryComboDoor", name: "Laundry Combo Door" },
+export const navDoorsLinks = [
+  { to: "/doors/FrenchDoor", name: "French Door" },
+  { to: "/doors/SlidingDoor", name: "Sliding Door" },
+  { to: "/doors/StackerDoor", name: "Stacker Door" },
+  { to: "/doors/LiftAndSlideDoor", name: "Lift And Slide Door" },
+  { to: "/doors/TiltAndSlideDoor", name: "Tilt And Slide Door" },
+  { to: "/doors/BifoldDoor", name: "Bifold Door" },
+  { to: "/doors/LaundryComboDoor", name: "Laundry Combo Door" },
+];
+
+export const navWindowsLinks = [
+  { to: "/windows/TiltAndTurn", name: "Tilt And Turn" },
+  { to: "/windows/Awning", name: "Awning" },
+  { to: "/windows/SlidingWindows", name: "Sliding Windows" },
+  { to: "/windows/Bifold", name: "Bifold" },
+  { to: "/windows/French", name: "French" },
+  { to: "/windows/Casement", name: "Casement" },
+  { to: "/windows/TiltAndSlide", name: "Tilt And Slide" },
+];
+
+export const otherProductsList = [
+  { to: "/windows/TiltAndTurn", name: "Tilt & Turn" },
+  { to: "/windows/Awning", name: "Awning" },
+  { to: "/windows/SlidingWindows", name: "Sliding Windows" },
+  { to: "/windows/Bifold", name: "Bifold" },
+  { to: "/windows/French", name: "French" },
+  { to: "/windows/Casement", name: "Casement" },
+  { to: "/windows/TiltAndSlide", name: "Tilt & Slide" },
+  { to: "/doors/FrenchDoor", name: "French Door" },
+  { to: "/doors/SlidingDoor", name: "Sliding Door" },
+  { to: "/doors/StackerDoor", name: "Stacker Door" },
+  { to: "/doors/LiftAndSlideDoor", name: "Lift & Slide Door" },
+  { to: "/doors/TiltAndSlideDoor", name: "Tilt & Slide Door" },
+  { to: "/doors/BifoldDoor", name: "Bifold Door" },
+  { to: "/doors/LaundryComboDoor", name: "Laundry Combo Door" },
 ];
 
 export const oldProducts = [
@@ -206,25 +226,25 @@ export const services = [
 ];
 
 export const windowProductList = [
-  { window: "Tilt & Turn", to: "/products/TiltAndTurn" },
-  { window: "Awning", to: "/products/Awning" },
-  { window: "Sliding", to: "/products/SlidingWindows" },
-  { window: "Bifold", to: "/products/Bifold" },
-  { window: "French", to: "/products/French" },
-  { window: "Casement", to: "/products/Casement" },
+  { window: "Tilt & Turn", to: "/windows/TiltAndTurn" },
+  { window: "Awning", to: "/windows/Awning" },
+  { window: "Sliding", to: "/windows/SlidingWindows" },
+  { window: "Bifold", to: "/windows/Bifold" },
+  { window: "French", to: "/windows/French" },
+  { window: "Casement", to: "/windows/Casement" },
   // { window: "Winder", to: "/products/TiltAndTurn" },
-  { window: "Tilt & Slide", to: "/products/TiltAndSlide" },
+  { window: "Tilt & Slide", to: "/windows/TiltAndSlide" },
 ];
 
 export const doorProductList = [
-  { door: "French Door", to: "/products/FrenchDoor" },
-  { door: "Sliding Door", to: "/products/SlidingDoor" },
-  { door: "Stacking Door", to: "/products/StackerDoor" },
-  { door: "Lift & Slide Door", to: "/products/LiftAndSlideDoor" },
-  { door: "Tilt & Slide Door", to: "/products/TiltAndSlideDoor" },
-  { door: "Bifold Door", to: "/products/BifoldDoor" },
+  { door: "French Door", to: "/doors/FrenchDoor" },
+  { door: "Sliding Door", to: "/doors/SlidingDoor" },
+  { door: "Stacking Door", to: "/doors/StackerDoor" },
+  { door: "Lift & Slide Door", to: "/doors/LiftAndSlideDoor" },
+  { door: "Tilt & Slide Door", to: "/doors/TiltAndSlideDoor" },
+  { door: "Bifold Door", to: "/doors/BifoldDoor" },
   // { door: "Single Hinged", to: "/products/FrenchDoor" },
-  { door: "Laundry Combo Door", to: "/products/LaundryComboDoor" },
+  { door: "Laundry Combo Door", to: "/doors/LaundryComboDoor" },
 ];
 
 export const reviewsListOne = [
