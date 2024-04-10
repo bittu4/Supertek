@@ -512,6 +512,7 @@ export const footerLinks = [
   { to: "#about", name: "About" },
   { to: "#products", name: "Products" },
   { to: "#contact", name: "Contacts" },
+  {to: "https://blog.supertekwindows.com.au/", name: "Blogs"}
 ];
 
 export const footerContactInfo = [
