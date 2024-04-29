@@ -371,10 +371,10 @@ export const FeatureProduct = [
     image: tickOrangeIcon,
     label: "Customisable to your style and space",
   },
-  {
-    image: tickOrangeIcon,
-    label: "A guaranteed service life of 30+ years",
-  },
+  // {
+  //   image: tickOrangeIcon,
+  //   label: "A guaranteed service life of 30+ years",
+  // },
 ];
 
 export const BenefitProduct = [
