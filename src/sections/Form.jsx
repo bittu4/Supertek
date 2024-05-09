@@ -1,51 +1,59 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { loader } from "../assets/images";
 
 const Form = () => {
-  const [formState, setFormState] = useState({email: '',
-  firstName: '',
-  lastName: "",
-  phoneNumber : "",
-  message: ''});
+  const [formState, setFormState] = useState({
+    email: "",
+    firstName: "",
+    lastName: "",
+    phoneNumber: "",
+    message: "",
+  });
   const [check, setCheck] = useState(false);
   // const [submit, setSubmit] = useState(false);
-  const [checkboxStatus, setCheckboxStatus] = useState(true)
+  const [checkboxStatus, setCheckboxStatus] = useState(true);
+  const [submit, setSubmit] = useState(false);
 
-
-  const checkboxHandler = (e) =>{
-    if(e.target.checked){
-      setCheck(true)
-      setCheckboxStatus(false)
-    }else{
-      setCheck(false)
-      setCheckboxStatus(true)
+  const checkboxHandler = (e) => {
+    if (e.target.checked) {
+      setCheck(true);
+      setCheckboxStatus(false);
+    } else {
+      setCheck(false);
+      setCheckboxStatus(true);
     }
-  }
+  };
 
   const changeHandler = (e) => {
     // setChecked(!checked);
     setFormState({ ...formState, [e.target.name]: e.target.value });
   };
 
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbxytPQ3loY3byio3gNzyjaLGh1o8tbr2jqBTREPWy17tO2KZ5hHLhH_88cfkNs1bNvRWA/exec'
-  const form = document.forms['contact-us']
+  const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxytPQ3loY3byio3gNzyjaLGh1o8tbr2jqBTREPWy17tO2KZ5hHLhH_88cfkNs1bNvRWA/exec";
+  const form = document.forms["contact-us"];
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    setSubmit(true);
     console.log(formState);
-    e.preventDefault()
-    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-      .then(response => {
-        setCheck(false)
-        setFormState({email: '',
-        firstName: '',
-        lastName: "",
-        phoneNumber : "",
-        message: ''})
-        alert("Form Submitted Successfully!")
-        console.log('Success!', response)
+    e.preventDefault();
+    fetch(scriptURL, { method: "POST", body: new FormData(form) })
+      .then((response) => {
+        setCheck(false);
+        setFormState({
+          email: "",
+          firstName: "",
+          lastName: "",
+          phoneNumber: "",
+          message: "",
+        });
+        alert("Form Submitted Successfully!");
+        setSubmit(false);
+        console.log("Success!", response);
       })
-      .catch(error => console.error('Error!', error.message))
+      .catch((error) => console.error("Error!", error.message));
   };
 
   return (
@@ -72,7 +80,10 @@ const Form = () => {
         <form onSubmit={submitHandler} name="contact-us">
           <div className="grid grid-cols-2 gap-x-4 mb-9">
             <div className="flex flex-col gap-y-3">
-              <label className="">First name <span className="text-red-600 text-lg pl-1 relative">*</span></label>
+              <label className="">
+                First name{" "}
+                <span className="text-red-600 text-lg pl-1 relative">*</span>
+              </label>
               <input
                 className="border-b-2 border-black py-1 contactInputField"
                 type="text"
@@ -97,7 +108,10 @@ const Form = () => {
           </div>
           <div className="grid grid-cols-2 gap-x-4 mb-9">
             <div className="flex flex-col gap-y-3">
-              <label>Email <span className="text-red-600 text-lg pl-1 relative">*</span></label>
+              <label>
+                Email{" "}
+                <span className="text-red-600 text-lg pl-1 relative">*</span>
+              </label>
               <input
                 className="border-b-2 border-black py-1 contactInputField"
                 type="email"
@@ -109,7 +123,10 @@ const Form = () => {
               />
             </div>
             <div className="flex flex-col gap-y-3">
-              <label>Phone number <span className="text-red-600 text-lg pl-1 relative">*</span></label>
+              <label>
+                Phone number{" "}
+                <span className="text-red-600 text-lg pl-1 relative">*</span>
+              </label>
               <input
                 className="border-b-2 border-black py-1 contactInputField"
                 type="text"
@@ -145,13 +162,22 @@ const Form = () => {
           </div>
           <div>
             <button
-              className="lg:py-5 lg:px-10 py-4 px-6 rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-none font-medium"
+              className={
+                checkboxStatus
+                  ? "lg:py-5 lg:px-10 py-4 px-6 rounded-[10px] bg-light-grey text-light-black cursor-not-allowed font-poppins text-lg leading-none font-medium"
+                  : "lg:py-5 lg:px-10 py-4 px-6 rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-none font-medium"
+              }
               type="submit"
               value="Send Email"
               disabled={checkboxStatus}
             >
               Submit
             </button>
+            {submit ? (
+              <span className="ml-3 inline-block align-middle">
+                <img src={loader} alt="loading gif" />
+              </span>
+            ) : null}
           </div>
         </form>
       </motion.div>

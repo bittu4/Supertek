@@ -40,6 +40,7 @@ import bifoldDoor1 from "./bifoldDoor1.webp";
 import bifoldDoor2 from "./bifoldDoor2.webp";
 import laundryComboDoor1 from "./laundryDoor1.webp";
 import laundryComboDoor2 from "./laundryDoor2.webp";
+import loader from "./bx_loader.gif";
 
 export {
   bannerWindow,
@@ -84,4 +85,5 @@ export {
   bifoldDoor2,
   laundryComboDoor1,
   laundryComboDoor2,
+  loader,
 };

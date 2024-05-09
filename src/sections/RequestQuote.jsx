@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { attachmentImg } from "../assets/images";
+import { attachmentImg, loader } from "../assets/images";
 
 const RequestQuote = () => {
   const [google, setGoogle] = useState(false);
@@ -7,6 +7,7 @@ const RequestQuote = () => {
   const [instagram, setInstagram] = useState(false);
   const [fileName, setFileName] = useState(null);
   const [error, setError] = useState("");
+  const [submit, setSubmit] = useState(false);
 
   const [formData, setFormData] = useState({
     fullName: "",
@@ -68,6 +69,7 @@ const RequestQuote = () => {
     ) {
       setError("Please fill this detail!");
     } else {
+      setSubmit(true);
       let fileData = null;
 
       if (fileName) {
@@ -106,6 +108,7 @@ const RequestQuote = () => {
       setFileName(null);
       setError("");
       alert("Form Submitted Successfully");
+      setSubmit(false);
     }
   };
 
@@ -333,6 +336,11 @@ const RequestQuote = () => {
           >
             Request Quote
           </button>
+          {submit ? (
+            <span className="ml-3 inline-block align-middle">
+              <img src={loader} alt="loading gif" />
+            </span>
+          ) : null}
         </div>
       </form>
     </section>
