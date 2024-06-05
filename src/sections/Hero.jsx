@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-import { bannerWindow } from "../assets/images";
+import { bifold1 } from "../assets/images";
 import { motion } from "framer-motion";
 
 const textVariants = {
@@ -95,7 +95,7 @@ const Hero = () => {
                 initial={{ opacity: 0, scale: 0.5 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 2 }}
-                src={bannerWindow}
+                src={bifold1}
                 height={455}
                 width={535}
                 className="object-contain"

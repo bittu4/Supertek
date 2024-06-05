@@ -122,7 +122,7 @@ const RequestQuote = () => {
 
   return (
     <section className="w-full max-container px-5 py-9 bg-[#F5F6F8] rounded-[20px]">
-      <h2 className="font-lato mb-12 font-extrabold text-4xl max-sm:text-3xl max-sm:mb-8">
+      <h2 className="font-lato mb-12 font-extrabold text-4xl max-sm:text-3xl max-sm:mb-8 text-center">
         Request Quote
       </h2>
       <form method="post" onSubmit={handleSubmission} name="request-quote">

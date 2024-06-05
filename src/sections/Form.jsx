@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { loader } from "../assets/images";
+import { isEmail } from "validator";
 
 const Form = () => {
   const [formState, setFormState] = useState({
@@ -14,6 +15,8 @@ const Form = () => {
   // const [submit, setSubmit] = useState(false);
   const [checkboxStatus, setCheckboxStatus] = useState(true);
   const [submit, setSubmit] = useState(false);
+  const [phoneErr, setPhoneErr] = useState("");
+  const [emailErr, setEmailErr] = useState("");
 
   const checkboxHandler = (e) => {
     if (e.target.checked) {
@@ -36,24 +39,36 @@ const Form = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    setSubmit(true);
-    console.log(formState);
-    e.preventDefault();
-    fetch(scriptURL, { method: "POST", body: new FormData(form) })
-      .then((response) => {
-        setCheck(false);
-        setFormState({
-          email: "",
-          firstName: "",
-          lastName: "",
-          phoneNumber: "",
-          message: "",
-        });
-        alert("Form Submitted Successfully!");
-        setSubmit(false);
-        console.log("Success!", response);
-      })
-      .catch((error) => console.error("Error!", error.message));
+    if (isNaN(formState.phoneNumber)) {
+      setPhoneErr("Please enter valid number");
+    } 
+    else if (!isEmail(formState.email)) {
+      setEmailErr("Please enter valid email");
+    } 
+    else {
+      setPhoneErr("");
+      setEmailErr("");
+      setCheckboxStatus(true);
+      setSubmit(true);
+      console.log(formState);
+      e.preventDefault();
+      fetch(scriptURL, { method: "POST", body: new FormData(form) })
+        .then((response) => {
+          setCheck(false);
+          setFormState({
+            email: "",
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            message: "",
+          });
+          alert("Form Submitted Successfully!");
+          setSubmit(false);
+          setPhoneErr("");
+          console.log("Success!", response);
+        })
+        .catch((error) => console.error("Error!", error.message));
+    }
   };
 
   return (
@@ -114,13 +129,16 @@ const Form = () => {
               </label>
               <input
                 className="border-b-2 border-black py-1 contactInputField"
-                type="email"
+                type="text"
                 name="email"
                 placeholder="John@gmail.com"
                 onChange={changeHandler}
                 value={formState.email || ""}
                 required
               />
+              <span className="text-xs text-red-500 font-poppins font-medium">
+                {emailErr}
+              </span>
             </div>
             <div className="flex flex-col gap-y-3">
               <label>
@@ -136,6 +154,9 @@ const Form = () => {
                 value={formState.phoneNumber || ""}
                 required
               />
+              <span className="text-xs text-red-500 font-poppins font-medium">
+                {phoneErr}
+              </span>
             </div>
           </div>
           <div className="grid grid-cols-1 mb-9">
