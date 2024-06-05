@@ -44,6 +44,7 @@ const Form = () => {
     } 
     else if (!isEmail(formState.email)) {
       setEmailErr("Please enter valid email");
+      setPhoneErr("");
     } 
     else {
       setPhoneErr("");
