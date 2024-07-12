@@ -1,3 +1,4 @@
+import { tickOrangeIcon } from "../../assets/icons";
 import { slidingWindow1, slidingWindow2 } from "../../assets/images";
 import {
   BenefitsProduct,
@@ -18,6 +19,44 @@ const slidingWindows = {
     "uPVC Sliding Windows are a type of window design that offers smooth and effortless operation. These windows consist of two or more horizontal sashes that slide horizontally along a track. They are operated by sliding one sash behind the other to open or close the window.",
 };
 
+const FeatureProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Smooth and effortleass operation",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Operate by sliding horizontally along a track",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "One or both sashes sliding open",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Operated by sliding one sash behind other",
+  },
+];
+
+const BenefitProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Space saving design",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Sleek and Modern appearance",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Suitable for limited space or obstruction",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Unobstructed views when fully opened",
+  },
+];
+
 const SlidingWindows = () => {
   return (
     <main className="flex flex-col">
@@ -31,10 +70,16 @@ const SlidingWindows = () => {
               <ProductVideo />
             </div>
             <div className="md:mt-14">
-              <FeaturesProduct productDetails={slidingWindows} />
+              <FeaturesProduct
+                productDetails={slidingWindows}
+                productFeatures={FeatureProduct}
+              />
             </div>
             <div className="padding-t md:mt-14">
-              <BenefitsProduct productDetails={slidingWindows} />
+              <BenefitsProduct
+                productDetails={slidingWindows}
+                productBenefits={BenefitProduct}
+              />
             </div>
             <div className="padding-y mt-4">
               <ServicesProduct />

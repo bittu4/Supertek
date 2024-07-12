@@ -44,7 +44,6 @@ import {
   locationIcon,
   mailIcon,
   phoneIconFooter,
-  tickOrangeIcon,
 } from "../assets/icons";
 
 export const navDoorsLinks = [
@@ -165,7 +164,7 @@ export const products = [
 export const services = [
   {
     image: service1,
-    label: "10 Years Warranty",
+    label: "10 Years Manufacturing Warranty",
   },
   {
     image: service2,
@@ -209,7 +208,7 @@ export const services = [
   },
   {
     image: service12,
-    label: "Double Glazed Glass",
+    label: "Double Glazed Low-E Plus Glass",
   },
   {
     image: service13,
@@ -221,7 +220,7 @@ export const services = [
   },
   {
     image: service15,
-    label: "Laminated Glass",
+    label: "Toughened Glass",
   },
 ];
 
@@ -354,58 +353,6 @@ export const benefits = [
   { image: tickIcon, content: "A guaranteed service life of 30+ years" },
 ];
 
-export const FeatureProduct = [
-  {
-    image: tickOrangeIcon,
-    label: "Clear view double glazed panes",
-  },
-  {
-    image: tickOrangeIcon,
-    label: "Excellent fire and weather resistance",
-  },
-  {
-    image: tickOrangeIcon,
-    label: "Available in a range of sizes",
-  },
-  {
-    image: tickOrangeIcon,
-    label: "Customisable to your style and space",
-  },
-  // {
-  //   image: tickOrangeIcon,
-  //   label: "A guaranteed service life of 30+ years",
-  // },
-];
-
-export const BenefitProduct = [
-  {
-    image: tickOrangeIcon,
-    label: "Instantly open up for fresh air and al fresco dining",
-  },
-  {
-    image: tickOrangeIcon,
-    label: "Keep doorways completely clear for improved flow",
-  },
-  {
-    image: tickOrangeIcon,
-    label:
-      "Cut down on heating and lighting costs through effective insulation",
-  },
-  {
-    image: tickOrangeIcon,
-    label: "Increase your available interior space with streamlined designs",
-  },
-  {
-    image: tickOrangeIcon,
-    label: "Save time with minimal maintenance and easy cleaning",
-  },
-  {
-    image: tickOrangeIcon,
-    label:
-      "Protects your home from water ingress that could damage your flooring",
-  },
-];
-
 export const servicesProduct = [
   {
     image: service1,
@@ -468,19 +415,11 @@ export const allFaq = [
     title: "Why Supertek Windows?",
     content:
       "Supertek Windows is a leading provider of high-quality double glazed uPVC windows and doors in Australia. Our team of experienced professionals is dedicated to delivering exceptional products and services to our customers. From sales and manufacturing to installations, repairs, and maintenance, we take care of every aspect of the business to ensure that our customers receive the best possible service. We offer a comprehensive range of products that are designed to complement the style of any home while incorporating the latest technology. Our commitment to quality and design has made us one of the most trusted companies in the industry. Choose Supertek Windows for premium double glazed uPVC windows and doors that are built to last.",
-    pointOne: "",
-    pointTwo: "",
-    pointThree: "",
-    pointFour: "",
   },
   {
     title: "What are double-glazed uPVC windows?",
     content:
       'Double-glazed uPVC windows are a type of window commonly used in residential and commercial buildings. They consist of two panes of glass that are separated by a sealed space, typically filled with air or an insulating gas, such as argon or krypton. The term "uPVC" stands for unplasticized polyvinyl chloride, which is a type of rigid, durable plastic used for the window frames.',
-    pointOne: "",
-    pointTwo: "",
-    pointThree: "",
-    pointFour: "",
   },
   {
     title: "What are the benefits of uPVC windows and doors?",
@@ -494,15 +433,19 @@ export const allFaq = [
       "3.  Enhanced Security: uPVC frames are known for their durability and resistance to weathering and rot. They also come with multi-point locking systems, enhancing the security of the windows.",
     pointFour:
       "4.  Low Maintenance: uPVC windows are relatively low-maintenance and do not require painting. They are resistant to moisture, so they won't rot or corrode.",
+    pointFive:
+      "5. Low-E Plus Glass: Our sustainable uPVC windows and doors come with Low-E (low-emissivity) glass, which has a special coating that reflects heat while allowing natural light to enter the home. This helps to further improve energy efficiency by minimizing heat transfer through the glass.",
+    pointSix:
+      "6. Warm Edge Spacer Technology: Our sustainable uPVC windows incorporate warm edge spacer technology, which reduces heat loss and condensation around the edges of the glass panes. This technology helps to improve the overall energy efficiency and comfort of the home.",
+    pointSeven:
+      "7. Weather Seals: Our uPVC windows and doors are equipped with high-quality weather seals that prevent drafts, air leakage, and moisture ingress, ensuring maximum energy efficiency and comfort.",
+    pointEight:
+      "8. Structurally reinforced: Our frames enhanced security by providing a stronger barrier against potential intrusions compared to non-reinforced frames.",
   },
   {
     title: "Are uPVC windows and doors resistant to fire?",
     content:
       "uPVC (unplasticized polyvinyl chloride) windows and doors are not inherently fire-resistant.",
-    pointOne: "",
-    pointTwo: "",
-    pointThree: "",
-    pointFour: "",
   },
 ];
 
@@ -512,7 +455,7 @@ export const footerLinks = [
   { to: "#about", name: "About" },
   { to: "#products", name: "Products" },
   { to: "#contact", name: "Contacts" },
-  {to: "https://blog.supertekwindows.com.au/", name: "Blogs"}
+  { to: "https://blog.supertekwindows.com.au/", name: "Blogs" },
 ];
 
 export const footerContactInfo = [

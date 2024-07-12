@@ -13,7 +13,7 @@ const OurProducts = () => {
             Supertek Windows
           </h4>
           {windowProductList.map((windows, index) => (
-            <li className="text-xl leading-7" key={index} {...windows}>
+            <li className="text-xl leading-7 hover:text-dark-orange hover:font-semibold" key={index} {...windows}>
               <NavLink to={windows.to}>{windows.window}</NavLink>
             </li>
           ))}
@@ -23,7 +23,7 @@ const OurProducts = () => {
             Supertek Doors
           </h4>
           {doorProductList.map((doors, index) => (
-            <li className="text-xl leading-7" key={index} {...doors}>
+            <li className="text-xl leading-7 hover:text-dark-orange hover:font-semibold" key={index} {...doors}>
               <NavLink to={doors.to}>{doors.door}</NavLink>
             </li>
           ))}

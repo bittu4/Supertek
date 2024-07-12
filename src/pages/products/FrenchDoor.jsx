@@ -1,3 +1,4 @@
+import { tickOrangeIcon } from "../../assets/icons";
 import { frenchDoor1, frenchDoor2 } from "../../assets/images";
 import {
   BenefitsProduct,
@@ -17,6 +18,45 @@ const frenchDoor = {
   description:
     "uPVC French doors are a type of door design that combines elegance and functionality. These doors consist of two panels that open outward from the center, creating a wide opening and allowing for easy access and ventilation.",
 };
+
+const FeatureProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Design that combines elegance and functionality",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Allowing for easy access and ventilation",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Enhanve the overall look of space",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Seamless connection between in and out spaces",
+  },
+];
+
+const BenefitProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Classic design with two door panels",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Designed for Easy to use",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Enabling enough natural light and air",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Unique soundproofing and dust-resistance",
+  },
+];
+
 const FrenchDoor = () => {
   return (
     <main className="flex flex-col">
@@ -30,10 +70,16 @@ const FrenchDoor = () => {
               <ProductVideo />
             </div>
             <div className="md:mt-14">
-              <FeaturesProduct productDetails={frenchDoor} />
+              <FeaturesProduct
+                productDetails={frenchDoor}
+                productFeatures={FeatureProduct}
+              />
             </div>
             <div className="padding-t md:mt-14">
-              <BenefitsProduct productDetails={frenchDoor} />
+              <BenefitsProduct
+                productDetails={frenchDoor}
+                productBenefits={BenefitProduct}
+              />
             </div>
             <div className="padding-y mt-4">
               <ServicesProduct />

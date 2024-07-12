@@ -150,7 +150,7 @@ const Form = () => {
                 className="border-b-2 border-black py-1 contactInputField"
                 type="text"
                 name="phoneNumber"
-                placeholder="9999999999"
+                placeholder="+61 - "
                 onChange={changeHandler}
                 value={formState.phoneNumber || ""}
                 required

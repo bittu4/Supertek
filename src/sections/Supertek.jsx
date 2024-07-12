@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { supertek } from "../assets/images";
+import { benefitImg } from "../assets/images";
 
 const supertekImageVariation = {
   initial: {
@@ -42,7 +42,7 @@ const Supertek = () => {
         className="max-w-2xl max-lg:max-w-lg"
       >
         <img
-          src={supertek}
+          src={benefitImg}
           width={712}
           height={581}
           className=" max-w-full"

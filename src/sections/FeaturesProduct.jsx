@@ -1,5 +1,3 @@
-import { FeatureProduct } from "../constants";
-
 const FeaturesProduct = (props) => {
   return (
     <section className="w-full max-container flex items-center gap-x-8 max-md:flex-col-reverse">
@@ -11,7 +9,7 @@ const FeaturesProduct = (props) => {
           Features
         </h2>
         <div>
-          {FeatureProduct.map((features, index) => (
+          {props.productFeatures.map((features, index) => (
             <div key={index} className="flex items-center mb-5 gap-x-4">
               <img src={features.image} />
               <p>{features.label}</p>

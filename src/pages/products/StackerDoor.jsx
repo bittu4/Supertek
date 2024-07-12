@@ -1,3 +1,4 @@
+import { tickOrangeIcon } from "../../assets/icons";
 import { stackerDoor1, stackerDoor2 } from "../../assets/images";
 import {
   BenefitsProduct,
@@ -18,6 +19,44 @@ const stackerDoor = {
     "uPVC Stacker Doors are a type of sliding door system that is commonly used in residential and commercial buildings. The unique feature of uPVC Stacker Doors is their ability to stack multiple panels behind each other when opened, creating a wide opening and maximizing the available space. This stacking mechanism allows for a seamless transition between indoor and outdoor areas, making them ideal for connecting living spaces to patios, decks, or gardens.",
 };
 
+const FeatureProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Ability to stack multiple panels behind each others",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Wide opening and maximizing available space",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Seamless transition between in and out areas",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Known for Space saving design",
+  },
+];
+
+const BenefitProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Provide seamless indoor-outdoor flow",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Allowing for easy access to decks, gardens, etc.",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Suitable for variuos architechtural styles",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Corner openings and large span",
+  },
+];
+
 const StackerDoor = () => {
   return (
     <main className="flex flex-col">
@@ -31,10 +70,16 @@ const StackerDoor = () => {
               <ProductVideo />
             </div>
             <div className="md:mt-14">
-              <FeaturesProduct productDetails={stackerDoor} />
+              <FeaturesProduct
+                productDetails={stackerDoor}
+                productFeatures={FeatureProduct}
+              />
             </div>
             <div className="padding-t md:mt-14">
-              <BenefitsProduct productDetails={stackerDoor} />
+              <BenefitsProduct
+                productDetails={stackerDoor}
+                productBenefits={BenefitProduct}
+              />
             </div>
             <div className="padding-y mt-4">
               <ServicesProduct />

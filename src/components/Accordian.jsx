@@ -29,10 +29,14 @@ const Accordian = ({ faq, isActiveFaq, setActiveFaq, faqIndex }) => {
             {faq.content}
           </div>
           <div className="sm:text-base text-sm sm:leading-[34px] leading-6">
-            <p>{faq.pointOne}</p>
-            <p>{faq.pointTwo}</p>
-            <p>{faq.pointThree}</p>
-            <p>{faq.pointFour}</p>
+            <p>{faq?.pointOne}</p>
+            <p>{faq?.pointTwo}</p>
+            <p>{faq?.pointThree}</p>
+            <p>{faq?.pointFour}</p>
+            <p>{faq?.pointFive}</p>
+            <p>{faq?.pointSix}</p>
+            <p>{faq?.pointSeven}</p>
+            <p>{faq?.pointEight}</p>
           </div>
           <hr className="my-6" />
         </div>

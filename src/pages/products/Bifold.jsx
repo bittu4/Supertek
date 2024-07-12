@@ -1,3 +1,4 @@
+import { tickOrangeIcon } from "../../assets/icons";
 import { bifold1, bifold2 } from "../../assets/images";
 import {
   BenefitsProduct,
@@ -18,6 +19,44 @@ const bifold = {
     "uPVC Bifold Windows are a type of window design that offers a unique and versatile opening mechanism. These windows consist of multiple panels that are hinged together and can be folded and stacked to one side, creating a wide opening space. They are commonly used to connect indoor and outdoor areas, such as patios, decks, or gardens. uPVC Bifold Windows provide excellent insulation, helping to keep your home energy-efficient and comfortable.",
 };
 
+const FeatureProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Folding mechanism consist of multiple panels",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Wide opening with seamless connecting",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Large opening withou encroaching areas",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Versatile opening options",
+  },
+];
+
+const BenefitProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Maximum flexibility in terms of opening options",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Open partially for ventilation",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Fully open for seamless transition",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Equipped with smooth sliding and locking system",
+  },
+];
+
 const Bifold = () => {
   return (
     <main className="flex flex-col">
@@ -31,10 +70,16 @@ const Bifold = () => {
               <ProductVideo />
             </div>
             <div className="md:mt-14">
-              <FeaturesProduct productDetails={bifold} />
+              <FeaturesProduct
+                productDetails={bifold}
+                productFeatures={FeatureProduct}
+              />
             </div>
             <div className="padding-t md:mt-14">
-              <BenefitsProduct productDetails={bifold} />
+              <BenefitsProduct
+                productDetails={bifold}
+                productBenefits={BenefitProduct}
+              />
             </div>
             <div className="padding-y mt-4">
               <ServicesProduct />

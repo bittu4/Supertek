@@ -1,3 +1,4 @@
+import { tickOrangeIcon } from "../../assets/icons";
 import { tiltAndSlide1, tiltAndSlide2 } from "../../assets/images";
 import {
   BenefitsProduct,
@@ -18,6 +19,44 @@ const tiltAndSlide = {
     "uPVC Tilt & Slide windows are a type of window design that combines the functionality of both tilt and slide mechanisms. The tilt function allows the window sash to tilt inwards from the top, providing ventilation while maintaining security. This is particularly useful when you want to let fresh air in without fully opening the window or when you need to clean the exterior glass from inside your home.",
 };
 
+const FeatureProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Dual functionality - Tilt & Slide",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Tilt inwards from top without fully opening",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Also slide horizontally for full opening",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Ideal for ventilation control",
+  },
+];
+
+const BenefitProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Comes with safety features",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Designed for Easy to use",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Ideal for areas where space is limited",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Easy maintenance and cleaning",
+  },
+];
+
 const TiltAndSlide = () => {
   return (
     <main className="flex flex-col">
@@ -31,10 +70,16 @@ const TiltAndSlide = () => {
               <ProductVideo />
             </div>
             <div className="md:mt-14">
-              <FeaturesProduct productDetails={tiltAndSlide} />
+              <FeaturesProduct
+                productDetails={tiltAndSlide}
+                productFeatures={FeatureProduct}
+              />
             </div>
             <div className="padding-t md:mt-14">
-              <BenefitsProduct productDetails={tiltAndSlide} />
+              <BenefitsProduct
+                productDetails={tiltAndSlide}
+                productBenefits={BenefitProduct}
+              />
             </div>
             <div className="padding-y mt-4">
               <ServicesProduct />

@@ -1,5 +1,3 @@
-import { BenefitProduct } from "../constants";
-
 const BenefitsProduct = (props) => {
   return (
     <section className="w-full max-container flex max-md:flex-col items-center gap-x-5">
@@ -8,7 +6,7 @@ const BenefitsProduct = (props) => {
           BENEFITS
         </h2>
         <div>
-          {BenefitProduct.map((benefits, index) => (
+          {props.productBenefits.map((benefits, index) => (
             <div key={index} className="flex items-center mb-5 gap-x-4">
               <img src={benefits.image} />
               <p>{benefits.label}</p>

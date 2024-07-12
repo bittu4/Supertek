@@ -1,3 +1,4 @@
+import { tickOrangeIcon } from "../../assets/icons";
 import { casement1, casement2 } from "../../assets/images";
 import {
   BenefitsProduct,
@@ -18,6 +19,44 @@ const casement = {
     "uPVC Casement Windows are a popular and versatile window style commonly used in residential and commercial buildings. These windows are hinged on the side and open outward like a door, providing maximum ventilation and easy access for cleaning and maintenance.",
 };
 
+const FeatureProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Popular and versatile style known",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Known for their tight seal when closed",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Hinged on one side and open outward from the other side",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Maximum ventilation and easy operation",
+  },
+];
+
+const BenefitProduct = [
+  {
+    image: tickOrangeIcon,
+    label: "Comes in variety of sizes and configuration",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Single or Double casement windows",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Allow for maximum airflow into room",
+  },
+  {
+    image: tickOrangeIcon,
+    label: "Combined with fixed or awning windows",
+  },
+];
+
 const Casement = () => {
   return (
     <main className="flex flex-col">
@@ -31,10 +70,16 @@ const Casement = () => {
               <ProductVideo />
             </div>
             <div className="md:mt-14">
-              <FeaturesProduct productDetails={casement} />
+              <FeaturesProduct
+                productDetails={casement}
+                productFeatures={FeatureProduct}
+              />
             </div>
             <div className="padding-t md:mt-14">
-              <BenefitsProduct productDetails={casement} />
+              <BenefitsProduct
+                productDetails={casement}
+                productBenefits={BenefitProduct}
+              />
             </div>
             <div className="padding-y mt-4">
               <ServicesProduct />

@@ -52,18 +52,19 @@ const Hero = () => {
                 variants={textVariants}
                 className="xl:text-2xl lg:text-xl text-base text-[#1E1E1E] font-semibold uppercase"
               >
-                Energy Efficient
+                Energy Efficient & Sustainable
               </motion.p>
               <motion.h1
                 variants={textVariants}
                 className="mt-4 text-dark-orange xl:text-[52px] lg:text-[35px] text-3xl font-extrabold xl:leading-[74px] lg:leading-[55px] leading-normal text-left"
               >
-                Sustainable uPVC Double <br />{" "}
+                uPVC Double Glazed
+                <br />{" "}
                 <motion.span
                   variants={textVariants}
                   className="sm:whitespace-nowrap"
                 >
-                  Glazed Windows & Doors
+                  Windows & Doors
                 </motion.span>
               </motion.h1>
               <motion.p
@@ -87,7 +88,7 @@ const Hero = () => {
                 variants={textVariants}
                 className="lg:py-6 lg:px-14 py-4 px-8 lg:mt-10 mt-5 rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-[20px] lg:font-semibold font-medium"
               >
-                Get a Quote
+                Get a Free Quote
               </motion.a>
             </motion.div>
             <div className="sm:flex hidden px-6 py-14 items-center flex-1 justify-center">
