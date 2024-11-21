@@ -60,9 +60,9 @@ const Footer = () => {
           <Subscribe />
         </div>
       </div>
-      <hr className="my-8 opacity-40" />
+      <hr className="mt-10 mb-4 opacity-40" />
       <div className="max-container flex justify-center text-white/[0.7]">
-        © SuperTek Windows 2024
+        Copyright © SuperTek Windows 2024, All right reserved.
       </div>
     </section>
   );
