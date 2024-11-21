@@ -14,12 +14,17 @@ const Footer = () => {
           </p>
           <div className="mt-12 flex items-center gap-3">
             {socialMedia.map((link) => (
-              <Link key={link.alt} to={""}>
+              <Link
+                className="bg-[#F7FBFF] w-[51px] h-[51px] flex items-center justify-center rounded-full"
+                key={link.alt}
+                to={link?.href}
+                target="_blank"
+              >
                 <img
                   src={link.src}
                   alt={link.alt}
-                  width={51}
-                  height={51}
+                  width={20}
+                  height={20}
                   className="object-contain cursor-pointer"
                 />
               </Link>
@@ -61,7 +66,7 @@ const Footer = () => {
         </div>
       </div>
       <hr className="mt-10 mb-4 opacity-40" />
-      <div className="max-container flex justify-center text-white/[0.7]">
+      <div className="max-container text-white/[0.7]">
         Copyright © SuperTek Windows 2024, All right reserved.
       </div>
     </section>

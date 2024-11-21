@@ -20,8 +20,6 @@ import {
 } from "../assets/images";
 
 import {
-  facebookIcon,
-  gmailIcon,
   service1,
   service2,
   service3,
@@ -37,13 +35,15 @@ import {
   service13,
   service14,
   service15,
-  twitterIcon,
   tickIcon,
   yesIcon,
   noIcon,
   locationIcon,
   mailIcon,
   phoneIconFooter,
+  facebookIcon,
+  xIcon,
+  instagramIcon,
 } from "../assets/icons";
 
 export const navDoorsLinks = [
@@ -405,9 +405,17 @@ export const servicesProduct = [
 ];
 
 export const socialMedia = [
-  { src: facebookIcon, alt: "facebook logo" },
-  { src: twitterIcon, alt: "twitter logo" },
-  { src: gmailIcon, alt: "gmail logo" },
+  { src: facebookIcon, alt: "facebook logo", href: "https://www.facebook.com" },
+  {
+    src: xIcon,
+    alt: "x-twitter logo",
+    href: "https://x.com",
+  },
+  {
+    src: instagramIcon,
+    alt: "instagram logo",
+    href: "https://www.instagram.com",
+  },
 ];
 
 export const allFaq = [
