@@ -10,10 +10,7 @@ const Footer = () => {
         <div className="flex flex-col items-start flex-1">
           <img src={FooterLogo} alt="Footer Logo" width={160} height={42} />
           <p className="text-base leading-[31px] font-medium text-white mt-7 pr-8">
-            The uPVC double-glazed windows and doors from Supterk Windows shield
-            you and your family from Australia&apos;s sweltering summers and chilly
-            winters. This is better to invest in thermally efficient systems, as
-            energy costs skyrocket.
+            Transform Your Home Today - Contact Us for a Free Consultation!
           </p>
           <div className="mt-12 flex items-center gap-3">
             {socialMedia.map((link) => (
@@ -62,6 +59,10 @@ const Footer = () => {
           </h3>
           <Subscribe />
         </div>
+      </div>
+      <hr className="my-8 opacity-40" />
+      <div className="max-container flex justify-center text-white/[0.7]">
+        © SuperTek Windows 2024
       </div>
     </section>
   );

@@ -41,12 +41,10 @@ const Form = () => {
     e.preventDefault();
     if (isNaN(formState.phoneNumber)) {
       setPhoneErr("Please enter valid number");
-    } 
-    else if (!isEmail(formState.email)) {
+    } else if (!isEmail(formState.email)) {
       setEmailErr("Please enter valid email");
       setPhoneErr("");
-    } 
-    else {
+    } else {
       setPhoneErr("");
       setEmailErr("");
       setCheckboxStatus(true);
@@ -83,9 +81,7 @@ const Form = () => {
           Claim Your Free Measure and Quote.
         </h3>
         <p className="text-[#696969] text-base leading-[31px] mt-5 max-md:text-center">
-          Claim your free measures and quote to discover how to add value to
-          your home by slashing your energy bills, reducing outside noise &
-          protecting from harsh weather.
+          Transform Your Home Today - Contact Us for a Free Consultation!
         </p>
       </motion.div>
       <motion.div

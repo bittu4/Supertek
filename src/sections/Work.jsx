@@ -45,13 +45,13 @@ const Work = () => {
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
-          className="max-w-lg flex flex-col gap-7"
+          className="max-w-2xl flex flex-col gap-7"
         >
           <p className="text-lg font-semibold text-dark-orange tracking-[1px] uppercase">
             HOW IT WORKS
           </p>
           <h3 className="sm:text-4xl text-3xl max-sm:leading-10 font-extrabold text-white">
-            We turn your dream into your dream home
+            Discover Energy Efficiency, Security, and Style in Every Frame
           </h3>
         </motion.div>
       </div>

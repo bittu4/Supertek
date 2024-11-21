@@ -267,10 +267,10 @@ export const reviewsListOne = [
     review: `"Gav takes pride in his work, not some normal guy thats just want your money and takes off,, he makes sure the job is done properly,, him and his staff where so friendly and there is no mess everthing is done to the best ,,if your looking for double glazed window ,,i would recommend them for sure, i am so happy with their work cheers guys."`,
     name: "Anthony Bates",
   },
-  {
-    review: `"I would surely recommend this double glazed uPVC window and door company to anyone who is in the market for retrofit or new windows and doors. They seem to offer a great selection of quality products at competitive prices, backed up by solid customer service."`,
-    name: "Manisha Tomar",
-  },
+  // {
+  //   review: `"I would surely recommend this double glazed uPVC window and door company to anyone who is in the market for retrofit or new windows and doors. They seem to offer a great selection of quality products at competitive prices, backed up by solid customer service."`,
+  //   name: "Manisha Tomar",
+  // },
 ];
 
 export const partners = [
@@ -417,6 +417,20 @@ export const allFaq = [
       "Supertek Windows is a leading provider of high-quality double glazed uPVC windows and doors in Australia. Our team of experienced professionals is dedicated to delivering exceptional products and services to our customers. From sales and manufacturing to installations, repairs, and maintenance, we take care of every aspect of the business to ensure that our customers receive the best possible service. We offer a comprehensive range of products that are designed to complement the style of any home while incorporating the latest technology. Our commitment to quality and design has made us one of the most trusted companies in the industry. Choose Supertek Windows for premium double glazed uPVC windows and doors that are built to last.",
   },
   {
+    title: "What is the 0% Interest Finance scheme?",
+    content:
+      "At Supertek Windows we want to make it easy for you to upgrade your home with our high-quality UPVC double-glazed windows. That's why we're proud to offer 0% interest finance options to help spread the cost of your new windows over time. Here see how you can take benefit of it:",
+    pointOne:
+      "1. Choose your new windows from our range of stylish and energy-efficient options.",
+    pointTwo:
+      "2. Apply for 0% interest finance through our trusted partner, Zip Money.",
+    pointThree: "3. Enjoy a 0% interest rate for 12 to 60 months.",
+    pointFour:
+      "4. Make affordable monthly payments, with minimal establishment fees.",
+    pointFive: "5. No interest charges upto 60 months.",
+    pointSix: "6. Affordable monthly payments to fit your budget.",
+  },
+  {
     title: "What are double-glazed uPVC windows?",
     content:
       'Double-glazed uPVC windows are a type of window commonly used in residential and commercial buildings. They consist of two panes of glass that are separated by a sealed space, typically filled with air or an insulating gas, such as argon or krypton. The term "uPVC" stands for unplasticized polyvinyl chloride, which is a type of rigid, durable plastic used for the window frames.',
@@ -455,7 +469,7 @@ export const footerLinks = [
   { to: "#about", name: "About" },
   { to: "#products", name: "Products" },
   { to: "#contact", name: "Contacts" },
-  { to: "https://blog.supertekwindows.com.au/", name: "Blogs" },
+  // { to: "https://blog.supertekwindows.com.au/", name: "Blogs" },
 ];
 
 export const footerContactInfo = [

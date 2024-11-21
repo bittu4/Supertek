@@ -52,7 +52,7 @@ const Hero = () => {
                 variants={textVariants}
                 className="xl:text-2xl lg:text-xl text-base text-[#1E1E1E] font-semibold uppercase"
               >
-                Energy Efficient & Sustainable
+                High Performance & Energy Efficient
               </motion.p>
               <motion.h1
                 variants={textVariants}
