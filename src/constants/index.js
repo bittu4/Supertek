@@ -1,4 +1,5 @@
 import {
+  PartnerFive,
   PartnerFour,
   PartnerOne,
   PartnerThird,
@@ -42,8 +43,9 @@ import {
   mailIcon,
   phoneIconFooter,
   facebookIcon,
-  xIcon,
+  // xIcon,
   instagramIcon,
+  youTubeIcon,
 } from "../assets/icons";
 
 export const navDoorsLinks = [
@@ -278,6 +280,7 @@ export const partners = [
   { partner: PartnerTwo, label: "Partner Two" },
   { partner: PartnerThird, label: "Partner Third" },
   { partner: PartnerFour, label: "Partner Four" },
+  { partner: PartnerFive, label: "Partner Five" },
 ];
 
 export const whyChoose = [
@@ -405,16 +408,25 @@ export const servicesProduct = [
 ];
 
 export const socialMedia = [
-  { src: facebookIcon, alt: "facebook logo", href: "https://www.facebook.com" },
   {
-    src: xIcon,
-    alt: "x-twitter logo",
-    href: "https://x.com",
+    src: facebookIcon,
+    alt: "facebook logo",
+    href: "https://www.facebook.com/supertekwindowsdoors",
   },
+  // {
+  //   src: xIcon,
+  //   alt: "x-twitter logo",
+  //   href: "https://x.com",
+  // },
   {
     src: instagramIcon,
     alt: "instagram logo",
-    href: "https://www.instagram.com",
+    href: "https://www.instagram.com/supertekwindows/",
+  },
+  {
+    src: youTubeIcon,
+    alt: "youTube logo",
+    href: "https://www.youtube.com/@supertekwindows",
   },
 ];
 

@@ -10,6 +10,7 @@ import PartnerOne from "./Partner-img-1.webp";
 import PartnerTwo from "./Partner-img-2.webp";
 import PartnerThird from "./Partner-img-3.webp";
 import PartnerFour from "./Partner-img-4.webp";
+import PartnerFive from "./Partner-img-5.png";
 import FooterLogo from "./Footer-logo.webp";
 import attachmentImg from "./attachment-img.webp";
 import tiltAndTurn1 from "./tilt&turn1.webp";
@@ -41,6 +42,7 @@ import bifoldDoor2 from "./bifoldDoor2.webp";
 import laundryComboDoor1 from "./laundryDoor1.webp";
 import laundryComboDoor2 from "./laundryDoor2.webp";
 import loader from "./bx_loader.gif";
+import colorChart from "./colorChart.jpg";
 
 export {
   bannerWindow,
@@ -55,6 +57,7 @@ export {
   PartnerTwo,
   PartnerThird,
   PartnerFour,
+  PartnerFive,
   FooterLogo,
   attachmentImg,
   tiltAndTurn1,
@@ -86,4 +89,5 @@ export {
   laundryComboDoor1,
   laundryComboDoor2,
   loader,
+  colorChart,
 };

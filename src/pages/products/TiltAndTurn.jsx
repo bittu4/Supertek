@@ -1,17 +1,14 @@
 import { tickOrangeIcon } from "../../assets/icons";
-import {
-  tiltAndTurn1,
-  tiltAndTurn2,
-} from "../../assets/images";
+import { tiltAndTurn1, tiltAndTurn2 } from "../../assets/images";
 import {
   BenefitsProduct,
-  Faq,
   FeaturesProduct,
   OtherProducts,
   ProductBanner,
   RequestQuote,
   ServicesProduct,
 } from "../../sections/";
+import ColorChart from "../../sections/ColorChart";
 import ProductVideo from "../../sections/ProductVideo";
 
 const tiltAndTurn = {
@@ -91,7 +88,7 @@ const TiltAndTurn = () => {
               <RequestQuote />
             </section>
             <div className="padding-y mb-12">
-              <Faq />
+              <ColorChart />
             </div>
           </div>
           <div className="max-lg:hidden lg:w-1/5">

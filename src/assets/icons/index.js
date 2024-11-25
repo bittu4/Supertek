@@ -29,6 +29,7 @@ import tickOrangeIcon from "./tick-orange-icon.svg";
 import instagramIcon from "./instagram.svg";
 import xIcon from "./x-twitter.svg";
 import facebookIcon from "./facebook.svg";
+import youTubeIcon from "./youtube.svg";
 
 export {
   downArrowIcon,
@@ -62,4 +63,5 @@ export {
   instagramIcon,
   xIcon,
   facebookIcon,
+  youTubeIcon,
 };

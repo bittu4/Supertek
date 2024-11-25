@@ -2,13 +2,13 @@ import { tickOrangeIcon } from "../../assets/icons";
 import { slidingWindow1, slidingWindow2 } from "../../assets/images";
 import {
   BenefitsProduct,
-  Faq,
   FeaturesProduct,
   OtherProducts,
   ProductBanner,
   RequestQuote,
   ServicesProduct,
 } from "../../sections/";
+import ColorChart from "../../sections/ColorChart";
 import ProductVideo from "../../sections/ProductVideo";
 
 const slidingWindows = {
@@ -88,7 +88,7 @@ const SlidingWindows = () => {
               <RequestQuote />
             </section>
             <div className="padding-y mb-12">
-              <Faq />
+              <ColorChart />
             </div>
           </div>
           <div className="max-lg:hidden lg:w-1/5">
