@@ -9,16 +9,21 @@ const Benefit = () => {
       <p className="text-[#696969] mb-14 text-center text-lg leading-[31px] mt-10">
         Supertek Windows is a leading uPVC windows and doors manufacturer in
         Australia that aims to provide advanced technology solutions to its
-        customers. We offer bespoke double glazing services for windows and
-        doors, utilizing German expertise and the world&apos;s most
-        sophisticated uPVC profile systems. Our team comprises experts with
-        extensive local knowledge and industry experience, who are dedicated to
-        making outstanding window and door systems accessible to all
-        Australians. We take pride in our project management and field service
-        experience, which enables us to deliver personalized services for your
-        home renovation or new construction projects. At Supertek Windows, we
-        tailor global ideas and systems to suit the Australian environment and
-        market. Our objective is to ensure that our customers have access to the
+        customers. We offer guaranteed Quality with Industry-Leading materials
+        and bespoke double glazing services for windows and doors, utilizing
+        German expertise and the world&apos;s most sophisticated uPVC profile
+        systems.
+        <br />
+        Our team comprises experts with extensive local knowledge and industry
+        experience, who are dedicated to professionally installed for Perfect
+        Fit and Functionality making outstanding window and door systems
+        accessible to all Australians. We take pride in our project management
+        and field service experience, which enables us to deliver personalized
+        services for your home renovation or new construction projects. At
+        Supertek Windows, we tailor global ideas and systems to suit the
+        Australian environment and market. Hundreds of Satisfied Customers with
+        5 star google reviews make us a reliable and trustworthy option for your
+        home. Our objective is to ensure that our customers have access to the
         best quality window and door systems that are tailored to their specific
         needs.
       </p>
