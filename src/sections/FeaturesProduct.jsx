@@ -18,7 +18,7 @@ const FeaturesProduct = (props) => {
         </div>
         <a
           key={"Request Quote"}
-          href={"#requestQuote"}
+          href={"#contact"}
           className="block w-fit font-poppins font-semibold text-[#fff] text-lg bg-[#ff8000] rounded-[10px] py-6 px-12 mt-3"
         >
           Request Quote

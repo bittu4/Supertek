@@ -52,8 +52,8 @@ const Hero = () => {
                 variants={textVariants}
                 className="xl:text-2xl lg:text-xl text-base text-[#1E1E1E] font-semibold uppercase"
               >
-                THERMAL EFFICIENT,&nbsp; ACOUSTIC SOLUTION, <br />
-                CLIMATE-CONTROL AND SOUND PROOF
+                THERMAL EFFICIENT,&nbsp; CLIMATE-CONTROL, <br />
+                AND SOUND PROOF
               </motion.p>
               <motion.h1
                 variants={textVariants}
@@ -72,11 +72,11 @@ const Hero = () => {
                 variants={textVariants}
                 className="max-w-xl lg:mt-8 mt-3 lg:text-lg text-sm lg:leading-7 leading-6 text-gray-600 text-left"
               >
-                Supertek Windows offers a comprehensive range of uPVC Double or
-                Triple glazed Windows & Doors. Our Windows & Doors are European
-                designed and highly customizable. The uPVC double-glazed windows
-                and doors from Supterk Windows shield you and your family from
-                Melbourne&apos;s sweltering summers and chilly winters.
+                Our locally manufactured products adhere to all Australian
+                standards and compliances, ensuring quality, safety, and support
+                for our community. The uPVC double-glazed windows and doors from
+                Supterk Windows shield you and your family from Melbourne&apos;s
+                sweltering summers and chilly winters.
                 <br /> This is better to invest in thermally efficient systems,
                 as energy costs skyrocket. To maintain and build an efficient
                 thermal insulating layer, Supertek&apos;s double-glazed windows

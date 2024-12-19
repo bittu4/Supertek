@@ -484,12 +484,10 @@ export const allFaq = [
 ];
 
 export const footerLinks = [
-  { to: "#", name: "Home" },
-  // { to: "#benefits", name: "Services" },
+  { to: "/", name: "Home" },
   { to: "#about", name: "About" },
   { to: "#products", name: "Products" },
   { to: "#contact", name: "Contacts" },
-  // { to: "https://blog.supertekwindows.com.au/", name: "Blogs" },
 ];
 
 export const footerContactInfo = [

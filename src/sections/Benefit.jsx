@@ -4,7 +4,7 @@ const Benefit = () => {
   return (
     <div className="max-container padding lg:-mt-16 lg:-mb-8">
       <h3 className="sm:text-4xl font-extrabold text-black leading-[71px] w-full text-center text-3xl max-sm:leading-10">
-        Why Choose Supertek Windows?
+        Why Supertek?
       </h3>
       <p className="text-[#696969] mb-14 text-center text-lg leading-[31px] mt-10">
         Supertek Windows is a leading uPVC windows and doors manufacturer in

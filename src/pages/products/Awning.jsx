@@ -81,10 +81,10 @@ const Awning = () => {
                 productBenefits={BenefitProduct}
               />
             </div>
-            <div className="padding-y mt-4">
+            <div id="about" className="padding-y mt-4">
               <ServicesProduct />
             </div>
-            <section id="requestQuote" className="">
+            <section id="contact" className="">
               <RequestQuote />
             </section>
             <div className="padding-y mb-12">
@@ -92,7 +92,7 @@ const Awning = () => {
               <ColorChart />
             </div>
           </div>
-          <div className="max-lg:hidden lg:w-1/5">
+          <div id="products" className="max-lg:hidden lg:w-1/5">
             <OtherProducts />
           </div>
         </div>

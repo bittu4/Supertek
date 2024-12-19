@@ -39,7 +39,7 @@ const Products = () => {
               <Faq />
             </div>
           </div>
-          <div className="max-lg:hidden lg:w-1/5">
+          <div id="products" className="max-lg:hidden lg:w-1/5">
             <OtherProducts />
           </div>
         </div>

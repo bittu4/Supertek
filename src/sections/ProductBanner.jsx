@@ -12,7 +12,7 @@ const ProductBanner = (props) => {
             </p>
             <a
               key={"Request Quote"}
-              href={"#requestQuote"}
+              href={"#contact"}
               className="lg:py-6 lg:px-14 py-4 px-8 lg:mt-8 mt-4 block w-fit rounded-[10px] bg-dark-orange text-white font-poppins text-lg leading-[20px] lg:font-semibold font-medium"
             >
               Claim free Quote
