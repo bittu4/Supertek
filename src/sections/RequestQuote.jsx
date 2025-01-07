@@ -18,6 +18,7 @@ const RequestQuote = () => {
     projectType: "",
     installRequired: "",
     radio: "",
+    message: "",
   });
 
   const handleGoogle = (e) => {
@@ -56,7 +57,7 @@ const RequestQuote = () => {
   };
 
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbywUH7f5A4afkani7xwqcAa7OE3rXT1gbqSzKVvBgoupQW-ApwcW5CjbiWh3nAhhZD9/exec";
+    "https://script.google.com/macros/s/AKfycbxmaU2o2Y8p0HOsbqoGEMcU37DPhvmcgu2tAJwHoov3xAmD_2tZes_htFUp2HUd9rJQ/exec";
 
   const handleSubmission = async (e) => {
     e.preventDefault();
@@ -101,6 +102,7 @@ const RequestQuote = () => {
         projectType: "",
         installRequired: "",
         radio: "",
+        message: "",
       });
       setGoogle(false);
       setReferral(false);
@@ -301,6 +303,21 @@ const RequestQuote = () => {
               {formData.radio === "" ? error : ""}
             </span>
           </div>
+          <div className="flex flex-col gap-y-1">
+            <label className="font-lato font-medium text-xs text-[#333]">
+              Message
+            </label>
+            <input
+              className="border-b-2 border-[#8d8d8d] py-1 contactInputField bg-inherit"
+              type="text"
+              placeholder="e.g."
+              name="message"
+              value={formData.message}
+              onChange={changeHandler}
+            />
+          </div>
+        </div>
+        <div className="grid grid-cols-3 max-md:grid-cols-1 max-md:gap-y-6 gap-x-6 mb-9">
           <div className="flex flex-col gap-y-1">
             <label className="font-lato font-medium text-xs text-[#333] mb-1">
               Upload Project Details (Maximum file size limit is 10MB)

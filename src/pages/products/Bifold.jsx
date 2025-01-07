@@ -6,7 +6,7 @@ import {
   OtherProducts,
   ProductBanner,
   RequestQuote,
-  ServicesProduct,
+  Services,
 } from "../../sections/";
 import ColorChart from "../../sections/ColorChart";
 import ProductVideo from "../../sections/ProductVideo";
@@ -82,7 +82,7 @@ const Bifold = () => {
               />
             </div>
             <div id="about" className="padding-y mt-4">
-              <ServicesProduct />
+              <Services />
             </div>
             <section id="contact" className="">
               <RequestQuote />
