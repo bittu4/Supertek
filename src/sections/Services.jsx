@@ -28,7 +28,6 @@ const Services = () => {
         whileInView="animate"
         viewport={{ once: true }}
         className="flex flex-wrap xl:gap-6 lg:gap-5 gap-4 mt-12 justify-center"
-        // className="grid lg:grid-cols-5 sm:grid-cols-3 grid-cols-2 xl:gap-6 lg:gap-5 gap-4 mt-12"
       >
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
