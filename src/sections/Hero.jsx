@@ -80,9 +80,7 @@ const Hero = () => {
                 <br />
                 Our locally manufactured products adhere to all Australian
                 standards and compliances, ensuring quality, safety, and support
-                for our community. The uPVC double-glazed windows and doors from
-                Supterk Windows shield you and your family from Melbourne&apos;s
-                sweltering summers and chilly winters.
+                for our community.
                 <br /> This is better to invest in thermally efficient systems,
                 as energy costs skyrocket. To maintain and build an efficient
                 thermal insulating layer, Supertek&apos;s double-glazed windows

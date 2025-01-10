@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { footerContactInfo, footerLinks, socialMedia } from "../constants";
-import Subscribe from "./Subscribe";
-import { FooterLogo } from "../assets/images";
+// import Subscribe from "./Subscribe";
+import { accreditedCompanyTag, FooterLogo } from "../assets/images";
 
 const Footer = () => {
   return (
@@ -58,11 +58,8 @@ const Footer = () => {
             </div>
           ))}
         </div>
-        <div className="flex-1">
-          <h3 className="text-3xl max-sm:text-2xl text-white font-bold leading-none mb-12">
-            Subscribe to Newsletter
-          </h3>
-          <Subscribe />
+        <div className="flex-1 self-center">
+          <img className="rounded-[20px]" src={accreditedCompanyTag} />
         </div>
       </div>
       <hr className="mt-10 mb-4 opacity-40" />

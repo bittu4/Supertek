@@ -46,6 +46,9 @@ import {
   // xIcon,
   instagramIcon,
   youTubeIcon,
+  service17,
+  service16,
+  service18,
 } from "../assets/icons";
 
 export const navDoorsLinks = [
@@ -223,6 +226,18 @@ export const services = [
   {
     image: service15,
     label: "Toughened Glass",
+  },
+  {
+    image: service16,
+    label: "Fly Screen",
+  },
+  {
+    image: service17,
+    label: "Warm Edge Spacer",
+  },
+  {
+    image: service18,
+    label: "Argon Gas Filled",
   },
 ];
 
@@ -433,13 +448,70 @@ export const socialMedia = [
 export const allFaq = [
   {
     title: "Why Supertek Windows?",
-    content:
-      "Supertek Windows is a leading provider of high-quality double glazed uPVC windows and doors in Australia. Our team of experienced professionals is dedicated to delivering exceptional products and services to our customers. From sales and manufacturing to installations, repairs, and maintenance, we take care of every aspect of the business to ensure that our customers receive the best possible service. We offer a comprehensive range of products that are designed to complement the style of any home while incorporating the latest technology. Our commitment to quality and design has made us one of the most trusted companies in the industry. Choose Supertek Windows for premium double glazed uPVC windows and doors that are built to last.",
+    pointOne:
+      "<b>Quality Assurance:</b> Guaranteed Quality with Industry-Leading Materials.",
+    pointTwo:
+      "<b>Expert Installation:</b> Professionally Installed for Perfect Fit and Functionality.",
+    pointThree:
+      "<b>Customer Satisfaction:</b> Hundreds of Satisfied Customers - 5 star google reviews.",
+    pointFour:
+      "<b>Accredited Company:</b> Australian Glass & Window Association member and accredited company.",
+    pointFive:
+      "<b>Made in Australia:</b> Your own local manufacturer and supplier.",
+    pointSix: "<b>Exceed 7 Star Enery Rating Products</b>",
   },
   {
-    title: "What is the 0% Interest Finance scheme?",
+    title: "Detailed benefits of our uPVC Windows and Doors?",
+    pointOne:
+      "<b>1. Advance Insulation:</b> Energy-efficient Supertek uPVC windows and doors are designed with multiple chambers within the frame to provide better insulation. This helps to reduce heat loss during colder months and prevent heat gain during warmer months, contributing to lower energy consumption for heating and cooling.",
+    pointTwo:
+      "<b>2. Energy Efficiency:</b> The double glazing and the insulating space between the glass panes help to reduce heat transfer, making the windows more energy-efficient. This can result in lower heating and cooling costs for a building.",
+    pointThree:
+      "<b>3. Low-E Plus Glass:</b> Our sustainable uPVC windows and doors come with Low-E (low-emissivity) Plus Toughened glass, which has a special coating that reflects heat while allowing natural light to enter the home. This helps to further improve energy efficiency by minimizing heat transfer through the glass.",
+    pointFour:
+      "<b>4. Sound Insulation:</b> Double-glazed/Triple-glazed uPVC windows provide better sound insulation compared to single-glazed windows, helping to reduce outside noise and create a quieter indoor environment.",
+    pointFive:
+      "<b>5. Security:</b> Multiple-locking system, anti-pick pins and anti-snap hinges for enhanced security.",
+    pointSix:
+      "<b>6. Argon Gas Filling:</b> Our energy-efficient uPVC windows feature argon gas filling between the glass panels. Argon is a dense, non-toxic gas that acts as an additional barrier against heat transfer, enhancing the thermal performance of the windows.",
+    pointSeven:
+      "<b>7. Warm Edge Spacer Technology:</b> Our sustainable uPVC windows incorporate warm edge spacer technology, which reduces heat loss and condensation around the edges of the glass panes. This technology helps to improve the overall energy efficiency and comfort of the home.",
+    pointEight:
+      "<b>8. Weather Seals:</b> Our uPVC windows and doors are equipped with high-quality weather seals that prevent drafts, air leakage, and moisture ingress, ensuring maximum energy efficiency and comfort.",
+    pointNine:
+      "<b>9. Longevity and Durability:</b> Our windows and doors are known for their durability and long lifespan and resistance to weathering and rot. By choosing our sustainable products, homeowners can reduce the need for frequent replacements, thereby minimizing resource consumption and waste generation.",
+    pointTen:
+      "<b>10. High Energy Ratings:</b> Our products exceed 7 star rating  and meet specific energy efficiency standards and can help homeowners make informed decisions.",
+    pointEleven:
+      "<b>11. Installation Quality:</b> Installation is carried out by experienced professionals using appropriate techniques and materials to prevent air leakage and ensure optimal performance.",
+    pointTwelve:
+      "<b>12. Overall Environmental Impact:</b> Consider the overall environmental impact of uPVC windows and doors, including factors such as manufacturing processes, transportation, and maintenance requirements. Sustainable choices prioritize eco-friendly manufacturing practices, minimize carbon emissions, and promote resource conservation throughout the product lifecycle.",
+    pointThirteen:
+      "<b>13. Structurally reinforced:</b> Our frames enhanced security by providing a stronger barrier against potential intrusions compared to non-reinforced frames.",
+    pointFourteen:
+      "<b>14. Weatherstripping:</b> Silicone-sealed weatherstripping for a tight seal against air and water.",
+  },
+  {
+    title: "Supertek Product Specification :",
+    pointOne:
+      "<b>1. Profile Material: </b><li><b>Type:</b> UPVC (Unplasticized Polyvinyl Chloride)</li><li><b>Recyclability:</b> Fully recyclable, contributing to environmentally friendly construction practices.</li><li><b>Color Options:</b> Available in a wide range of colors, including wood grain finishes for a more natural look</li><li><b>Thickness:</b> 70mm profile depth, ensuring structural integrity and thermal efficiency</li>",
+    pointTwo:
+      "<b>2. Profile Design:</b> <li>Multi-chamber profile system providing enhanced thermal insulation and strength</li><li>Smooth, sleek lines that emulate the appearance of traditional wooden frames</li><li><b>Reveal:</b> 19mm Pine primmed reveal, can be customize to the requirements. Also, can upgrade to Tasman hardwood</li>",
+    pointThree:
+      "<b>3. Glass Configuration: </b><li><b>Outer Layer:</b> Thickness: 4-6 mm Clear toughened glass</li><li><b>Warm Edge Spacer Bar:</b> Thickness: 12-16 mm argon gas-filled spacer</li><li><b>Inner Layer:</b> Thickness: 4-6 mm Low E Plus toughened glass</li>",
+    pointFour:
+      "<b>4. Thermal Performance:</b><li><b>U-Value:</b> Typically rated around 1.2 W/m2K when combined with suitable glazing options</li><li><b>Weather Seals:</b> Equipped with comprehensive weather seals to minimize air and water infiltration, enhancing energy performance</li><li><b>Resistance:</b> High resistance to UV rays, rot, and corrosion, ensuring long-lasting performance</li><li><b>Maintenance:</b> Requires minimal maintenance; a simple wash with soap and water will keep the profiles in pristine condition</li><li><b>Fire Resistance:</b> Our windows and doors are highly fire resistance provide highest protection against radiant heat and ember attack with rating <b>BAL 40( Bushfire Attack Level)</b></li><li>For extra emissivity coating to enhance thermal performance and energy efficiency we use Low-e Plus glass</li><li>Argon gas provides better thermal insulation compared to regular air filling</li><li>Silicone-sealed weatherstripping and weather seals</li>",
+    pointFive:
+      "<b>5. Acoustic Performance:</b> <li>Designed to reduce noise transmission, providing a peaceful indoor environment</li><li>Customized Audioshield laminated glass is a high performance acoustic laminate that uses a special interlayer for superior sound reduction against a full range of noises</li>",
+    pointSix:
+      "<b>6. Security Features: </b><li><b>Multi-point Locking System:</b> Provides increased security and minimized the chances of intruders</li><li><b>Reinforced Options:</b> Available for added stability and robustness</li><li>With Triple and Double glazed toughened glass enhanced safety with its strength and durability</li>",
+    pointSeven:
+      "<b>7.  Compliance and Certification: </b><li>Product performance and compliance with the National Construction Code, Australian Standard (AS) 2047 Windows and external glazed doors in buildings, Australian Standard (AS) 1288 Glass in buildings and other relevant Australian Standards applicable to the project being reviewed</li><li>Meets all relevant Australian standards, compliance and certification for thermal efficiency, durability, and safety</li><li>AGWA Accredited Company</li>",
+  },
+  {
+    title: "What is the 0% Interest Finance option (Buy Now, Pay Later)?",
     content:
-      "At Supertek Windows we want to make it easy for you to upgrade your home with our high-quality UPVC double-glazed windows. That's why we're proud to offer 0% interest finance options to help spread the cost of your new windows over time. Here see how you can take benefit of it:",
+      "Buying now and paying later for UPVC double-glazed windows can be a fantastic way to upgrade your home. We're proud to offer 0% interest finance options to help spread the cost of your new windows over time. Here see how you can take benefit of it",
     pointOne:
       "1. Choose your new windows from our range of stylish and energy-efficient options.",
     pointTwo:
@@ -449,37 +521,19 @@ export const allFaq = [
       "4. Make affordable monthly payments, with minimal establishment fees.",
     pointFive: "5. No interest charges upto 60 months.",
     pointSix: "6. Affordable monthly payments to fit your budget.",
+    pointSeven: "<b>Don't wait. Apply now.</b>",
   },
   {
-    title: "What are double-glazed uPVC windows?",
+    title:
+      "What does Australian Glass & Window Association (AGWA) accredited company mean?",
     content:
-      'Double-glazed uPVC windows are a type of window commonly used in residential and commercial buildings. They consist of two panes of glass that are separated by a sealed space, typically filled with air or an insulating gas, such as argon or krypton. The term "uPVC" stands for unplasticized polyvinyl chloride, which is a type of rigid, durable plastic used for the window frames.',
-  },
-  {
-    title: "What are the benefits of uPVC windows and doors?",
-    content:
-      "Here are some key features and benefits of double-glazed uPVC windows:",
+      "Supertek Windows is proudly a AGWA Accredited Company which mean we are audited and verified to",
     pointOne:
-      "1.  Energy Efficiency: The double glazing and the insulating space between the glass panes help to reduce heat transfer, making the windows more energy-efficient. This can result in lower heating and cooling costs for a building.",
-    pointTwo:
-      "2.  Sound Insulation: Double-glazed uPVC windows provide better sound insulation compared to single-glazed windows, helping to reduce outside noise and create a quieter indoor environment.",
-    pointThree:
-      "3.  Enhanced Security: uPVC frames are known for their durability and resistance to weathering and rot. They also come with multi-point locking systems, enhancing the security of the windows.",
+      "1. expertise in glazing, window production, and related activities",
+    pointTwo: "2. complies with national and state regulations",
+    pointThree: "3. use the highest quality standards",
     pointFour:
-      "4.  Low Maintenance: uPVC windows are relatively low-maintenance and do not require painting. They are resistant to moisture, so they won't rot or corrode.",
-    pointFive:
-      "5. Low-E Plus Glass: Our sustainable uPVC windows and doors come with Low-E (low-emissivity) glass, which has a special coating that reflects heat while allowing natural light to enter the home. This helps to further improve energy efficiency by minimizing heat transfer through the glass.",
-    pointSix:
-      "6. Warm Edge Spacer Technology: Our sustainable uPVC windows incorporate warm edge spacer technology, which reduces heat loss and condensation around the edges of the glass panes. This technology helps to improve the overall energy efficiency and comfort of the home.",
-    pointSeven:
-      "7. Weather Seals: Our uPVC windows and doors are equipped with high-quality weather seals that prevent drafts, air leakage, and moisture ingress, ensuring maximum energy efficiency and comfort.",
-    pointEight:
-      "8. Structurally reinforced: Our frames enhanced security by providing a stronger barrier against potential intrusions compared to non-reinforced frames.",
-  },
-  {
-    title: "Are uPVC windows and doors resistant to fire?",
-    content:
-      "uPVC (unplasticized polyvinyl chloride) windows and doors are not inherently fire-resistant.",
+      "Achieving accreditation makes a strong statement to the community about an organization's efforts to provide the highest quality services.",
   },
 ];
 

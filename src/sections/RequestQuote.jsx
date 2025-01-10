@@ -57,7 +57,7 @@ const RequestQuote = () => {
   };
 
   const scriptURL =
-    "https://script.google.com/macros/s/AKfycbxmaU2o2Y8p0HOsbqoGEMcU37DPhvmcgu2tAJwHoov3xAmD_2tZes_htFUp2HUd9rJQ/exec";
+    "https://script.google.com/macros/s/AKfycbxUnP3EoGYOSNeOJGkZou8nul5b_UC9GsNslgXangybuGuf0AALnap1fgiIDzrcnO5F/exec";
 
   const handleSubmission = async (e) => {
     e.preventDefault();

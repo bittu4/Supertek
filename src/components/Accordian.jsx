@@ -6,6 +6,34 @@ const Accordian = ({ faq, isActiveFaq, setActiveFaq, faqIndex }) => {
     setActiveFaq(nextFaq);
   };
 
+  const FAQContent = ({ faq }) => {
+    return (
+      <>
+        <div
+          className="sm:text-base text-sm sm:leading-[34px] leading-6"
+          dangerouslySetInnerHTML={{ __html: faq?.content }}
+        />
+        <div className="sm:text-base text-sm sm:leading-[34px] leading-6">
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointOne }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointTwo }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointThree }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointFour }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointFive }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointSix }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointSeven }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointEight }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointNine }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointTen }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointEleven }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointTwelve }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointThirteen }} />
+          <p dangerouslySetInnerHTML={{ __html: faq?.pointFourteen }} />
+        </div>
+        <hr className="my-6" />
+      </>
+    );
+  };
+
   return (
     <div>
       <div
@@ -25,20 +53,7 @@ const Accordian = ({ faq, isActiveFaq, setActiveFaq, faqIndex }) => {
       </div>
       {isActiveFaq && (
         <div className="transition duration-1000 ease">
-          <div className="sm:text-base text-sm sm:leading-[34px] leading-6">
-            {faq.content}
-          </div>
-          <div className="sm:text-base text-sm sm:leading-[34px] leading-6">
-            <p>{faq?.pointOne}</p>
-            <p>{faq?.pointTwo}</p>
-            <p>{faq?.pointThree}</p>
-            <p>{faq?.pointFour}</p>
-            <p>{faq?.pointFive}</p>
-            <p>{faq?.pointSix}</p>
-            <p>{faq?.pointSeven}</p>
-            <p>{faq?.pointEight}</p>
-          </div>
-          <hr className="my-6" />
+          <FAQContent faq={faq} />
         </div>
       )}
     </div>

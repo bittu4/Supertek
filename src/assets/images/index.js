@@ -44,6 +44,7 @@ import laundryComboDoor2 from "./laundryDoor2.webp";
 import loader from "./bx_loader.gif";
 import colorChart from "./colorChart.jpg";
 import bannerImg from "./banner-img.jpeg";
+import accreditedCompanyTag from "./accreditedCompanyTag.jpg";
 
 export {
   bannerWindow,
@@ -92,4 +93,5 @@ export {
   loader,
   colorChart,
   bannerImg,
+  accreditedCompanyTag,
 };

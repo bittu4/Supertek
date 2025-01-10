@@ -51,7 +51,7 @@ const Work = () => {
             HOW IT WORKS
           </p>
           <h3 className="sm:text-4xl text-3xl max-sm:leading-10 font-extrabold text-white">
-            Energy-Efficient &nbsp;And&nbsp; Acoustic Solution
+            Energy-Efficient &nbsp;And&nbsp; Acoustic Solution System
           </h3>
         </motion.div>
       </div>

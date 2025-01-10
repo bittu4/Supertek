@@ -16,6 +16,9 @@ import service12 from "./service-12.svg";
 import service13 from "./service-13.svg";
 import service14 from "./service-14.svg";
 import service15 from "./service-15.svg";
+import service16 from "./service-16.png";
+import service17 from "./service-17.png";
+import service18 from "./service-18.png";
 import upArrowIcon from "./up-arrow.svg";
 import menuIcon from "./menu-icon.svg";
 import closeIcon from "./close-icon.svg";
@@ -50,6 +53,9 @@ export {
   service13,
   service14,
   service15,
+  service16,
+  service17,
+  service18,
   upArrowIcon,
   menuIcon,
   closeIcon,
